@@ -1,0 +1,482 @@
+{
+  "baslangic": "2026-11-19 17:39:11 +0300",
+  "model": "gemma4:12b-it-qat",
+  "secenekler": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_gpu": 0
+  },
+  "sinirsiz": [
+    {
+      "metin": "Toplantıyı yarına erteledik çünkü proje yöneticisi şehir dışındaydı; yine de raporu bu akşam göndereceğim.",
+      "yon": "tr-en",
+      "kosullar": {
+        "tek": {
+          "cikti": "We postponed the meeting until tomorrow because the project manager was out of town; I will still send the report this evening.",
+          "sure": 6.78,
+          "istem_token": 654,
+          "istem_sn": 1.57,
+          "yukleme_sn": 1.04,
+          "uretilen_token": 25,
+          "onbellek_token": [
+            615,
+            650
+          ]
+        },
+        "tekrar": {
+          "cikti": "We postponed the meeting until tomorrow because the project manager was out of town; I will still send the report this evening.",
+          "sure": 6.74,
+          "istem_token": 654,
+          "istem_sn": 1.41,
+          "yukleme_sn": 1.19,
+          "uretilen_token": 25,
+          "onbellek_token": [
+            614,
+            650
+          ]
+        },
+        "detayli_sonra": {
+          "cikti": "We postponed the meeting until tomorrow because the project manager was out of town; nevertheless, I will send the report this evening.",
+          "sure": 7.39,
+          "istem_token": 654,
+          "istem_sn": 1.63,
+          "yukleme_sn": 1.17,
+          "uretilen_token": 26,
+          "onbellek_token": [
+            598,
+            650
+          ]
+        },
+        "baska_sonra": {
+          "cikti": "We postponed the meeting until tomorrow because the project manager was out of town; I will still send the report this evening.",
+          "sure": 7.21,
+          "istem_token": 654,
+          "istem_sn": 1.85,
+          "yukleme_sn": 1.26,
+          "uretilen_token": 25,
+          "onbellek_token": [
+            597,
+            650
+          ]
+        }
+      }
+    },
+    {
+      "metin": "Akşam yemeğinden sonra sahilde uzun bir yürüyüş yaptık ve eve dönerken yağmura yakalandık.",
+      "yon": "tr-en",
+      "kosullar": {
+        "tek": {
+          "cikti": "We took a long walk on the beach after dinner and got caught in the rain on our way home.",
+          "sure": 6.54,
+          "istem_token": 650,
+          "istem_sn": 1.71,
+          "yukleme_sn": 1.22,
+          "uretilen_token": 22,
+          "onbellek_token": [
+            621,
+            597,
+            646
+          ]
+        },
+        "tekrar": {
+          "cikti": "We took a long walk on the beach after dinner and got caught in the rain on our way home.",
+          "sure": 6.35,
+          "istem_token": 650,
+          "istem_sn": 1.71,
+          "yukleme_sn": 1.05,
+          "uretilen_token": 22,
+          "onbellek_token": [
+            597,
+            646
+          ]
+        },
+        "detayli_sonra": {
+          "cikti": "We took a long walk on the beach after dinner and got caught in the rain on our way home.",
+          "sure": 6.51,
+          "istem_token": 650,
+          "istem_sn": 1.51,
+          "yukleme_sn": 1.08,
+          "uretilen_token": 22,
+          "onbellek_token": [
+            598,
+            646
+          ]
+        },
+        "baska_sonra": {
+          "cikti": "We took a long walk on the beach after dinner and got caught in the rain on our way home.",
+          "sure": 6.34,
+          "istem_token": 650,
+          "istem_sn": 1.73,
+          "yukleme_sn": 1.02,
+          "uretilen_token": 22,
+          "onbellek_token": [
+            597,
+            646
+          ]
+        }
+      }
+    },
+    {
+      "metin": "If the sensor reading drifts after a few hours, recalibrate it and log the offset before restarting the task.",
+      "yon": "en-tr",
+      "kosullar": {
+        "tek": {
+          "cikti": "Eğer sensör okuması birkaç saat sonra kayarsa, onu yeniden kalibre edin ve task'ı yeniden başlatmadan önce sapmayı loglayın.",
+          "sure": 8.66,
+          "istem_token": 662,
+          "istem_sn": 2.01,
+          "yukleme_sn": 1.18,
+          "uretilen_token": 33,
+          "onbellek_token": [
+            597,
+            658
+          ]
+        },
+        "tekrar": {
+          "cikti": "Eğer sensör okuması birkaç saat sonra kayarsa, onu yeniden kalibre edin ve task'ı yeniden başlatmadan önce sapmayı loglayın.",
+          "sure": 8.71,
+          "istem_token": 662,
+          "istem_sn": 2.13,
+          "yukleme_sn": 1.09,
+          "uretilen_token": 33,
+          "onbellek_token": [
+            597,
+            658
+          ]
+        },
+        "detayli_sonra": {
+          "cikti": "Eğer sensör okuması birkaç saat sonra kayarsa, onu yeniden kalibre edin ve task'ı yeniden başlatmadan önce sapmayı loglayın.",
+          "sure": 8.74,
+          "istem_token": 662,
+          "istem_sn": 1.89,
+          "yukleme_sn": 1.07,
+          "uretilen_token": 33,
+          "onbellek_token": [
+            598,
+            658
+          ]
+        },
+        "baska_sonra": {
+          "cikti": "Eğer sensör okuması birkaç saat sonra kayarsa, onu yeniden kalibre edin ve task'ı yeniden başlatmadan önce sapmayı loglayın.",
+          "sure": 8.72,
+          "istem_token": 662,
+          "istem_sn": 2.13,
+          "yukleme_sn": 1.13,
+          "uretilen_token": 33,
+          "onbellek_token": [
+            597,
+            658
+          ]
+        }
+      }
+    },
+    {
+      "metin": "She said she would call back after lunch, but nobody has heard from her since then.",
+      "yon": "en-tr",
+      "kosullar": {
+        "tek": {
+          "cikti": "Öğle yemeğinden sonra geri arayacağını söyledi ama o zamandan beri kimse ondan haber alamadı.",
+          "sure": 6.94,
+          "istem_token": 642,
+          "istem_sn": 1.53,
+          "yukleme_sn": 1.13,
+          "uretilen_token": 26,
+          "onbellek_token": [
+            621,
+            597,
+            638
+          ]
+        },
+        "tekrar": {
+          "cikti": "Öğle yemeğinden sonra geri arayacağını söyledi ama o zamandan beri kimse ondan haber alamadı.",
+          "sure": 6.93,
+          "istem_token": 642,
+          "istem_sn": 1.57,
+          "yukleme_sn": 1.08,
+          "uretilen_token": 26,
+          "onbellek_token": [
+            597,
+            638
+          ]
+        },
+        "detayli_sonra": {
+          "cikti": "Öğle yemeğinden sonra geri arayacağını söyledi ama o zamandan beri kimse ondan haber alamadı.",
+          "sure": 7.1,
+          "istem_token": 642,
+          "istem_sn": 1.34,
+          "yukleme_sn": 1.17,
+          "uretilen_token": 26,
+          "onbellek_token": [
+            598,
+            638
+          ]
+        },
+        "baska_sonra": {
+          "cikti": "Öğle yemeğinden sonra geri arayacağını söyledi ama o zamandan beri kimse ondan haber alamadı.",
+          "sure": 6.9,
+          "istem_token": 642,
+          "istem_sn": 1.54,
+          "yukleme_sn": 1.08,
+          "uretilen_token": 26,
+          "onbellek_token": [
+            597,
+            638
+          ]
+        }
+      }
+    }
+  ],
+  "sinirli": [
+    {
+      "metin": "Toplantıyı yarına erteledik çünkü proje yöneticisi şehir dışındaydı; yine de raporu bu akşam göndereceğim.",
+      "yon": "tr-en",
+      "kosullar": {
+        "tek": {
+          "cikti": "We postponed the meeting until tomorrow because the project manager was out of town; I will still send the report this evening.",
+          "sure": 7.02,
+          "istem_token": 654,
+          "istem_sn": 1.82,
+          "yukleme_sn": 1.09,
+          "uretilen_token": 25,
+          "onbellek_token": [
+            610,
+            597,
+            650
+          ],
+          "sinir_sure": 2.09
+        },
+        "tekrar": {
+          "cikti": "We postponed the meeting until tomorrow because the project manager was out of town; I will still send the report this evening.",
+          "sure": 7.14,
+          "istem_token": 654,
+          "istem_sn": 1.87,
+          "yukleme_sn": 1.16,
+          "uretilen_token": 25,
+          "onbellek_token": [
+            610,
+            597,
+            650
+          ],
+          "sinir_sure": 2.11
+        },
+        "detayli_sonra": {
+          "cikti": "We postponed the meeting until tomorrow because the project manager was out of town; I will still send the report this evening.",
+          "sure": 6.86,
+          "istem_token": 654,
+          "istem_sn": 1.86,
+          "yukleme_sn": 0.91,
+          "uretilen_token": 25,
+          "onbellek_token": [
+            610,
+            597,
+            650
+          ],
+          "sinir_sure": 1.96
+        },
+        "baska_sonra": {
+          "cikti": "We postponed the meeting until tomorrow because the project manager was out of town; I will still send the report this evening.",
+          "sure": 7.16,
+          "istem_token": 654,
+          "istem_sn": 1.87,
+          "yukleme_sn": 1.16,
+          "uretilen_token": 25,
+          "onbellek_token": [
+            597,
+            610,
+            597,
+            650
+          ],
+          "sinir_sure": 1.95
+        }
+      }
+    },
+    {
+      "metin": "Akşam yemeğinden sonra sahilde uzun bir yürüyüş yaptık ve eve dönerken yağmura yakalandık.",
+      "yon": "tr-en",
+      "kosullar": {
+        "tek": {
+          "cikti": "We took a long walk on the beach after dinner and got caught in the rain on our way home.",
+          "sure": 6.36,
+          "istem_token": 650,
+          "istem_sn": 1.74,
+          "yukleme_sn": 1.0,
+          "uretilen_token": 22,
+          "onbellek_token": [
+            597,
+            646
+          ],
+          "sinir_sure": 1.88
+        },
+        "tekrar": {
+          "cikti": "We took a long walk on the beach after dinner and got caught in the rain on our way home.",
+          "sure": 6.41,
+          "istem_token": 650,
+          "istem_sn": 1.63,
+          "yukleme_sn": 1.2,
+          "uretilen_token": 22,
+          "onbellek_token": [
+            610,
+            597,
+            646
+          ],
+          "sinir_sure": 2.1
+        },
+        "detayli_sonra": {
+          "cikti": "We took a long walk on the beach after dinner and got caught in the rain on our way home.",
+          "sure": 6.51,
+          "istem_token": 650,
+          "istem_sn": 1.7,
+          "yukleme_sn": 1.22,
+          "uretilen_token": 22,
+          "onbellek_token": [
+            598,
+            610,
+            597,
+            646
+          ],
+          "sinir_sure": 1.82
+        },
+        "baska_sonra": {
+          "cikti": "We took a long walk on the beach after dinner and got caught in the rain on our way home.",
+          "sure": 6.56,
+          "istem_token": 650,
+          "istem_sn": 1.73,
+          "yukleme_sn": 1.23,
+          "uretilen_token": 22,
+          "onbellek_token": [
+            610,
+            597,
+            646
+          ],
+          "sinir_sure": 1.9
+        }
+      }
+    },
+    {
+      "metin": "If the sensor reading drifts after a few hours, recalibrate it and log the offset before restarting the task.",
+      "yon": "en-tr",
+      "kosullar": {
+        "tek": {
+          "cikti": "Eğer sensör okuması birkaç saat sonra kayarsa, onu yeniden kalibre edin ve task'ı yeniden başlatmadan önce sapmayı loglayın.",
+          "sure": 8.65,
+          "istem_token": 662,
+          "istem_sn": 2.13,
+          "yukleme_sn": 1.05,
+          "uretilen_token": 33,
+          "onbellek_token": [
+            597,
+            658
+          ],
+          "sinir_sure": 2.04
+        },
+        "tekrar": {
+          "cikti": "Eğer sensör okuması birkaç saat sonra kayarsa, onu yeniden kalibre edin ve task'ı yeniden başlatmadan önce sapmayı loglayın.",
+          "sure": 8.77,
+          "istem_token": 662,
+          "istem_sn": 2.13,
+          "yukleme_sn": 1.12,
+          "uretilen_token": 33,
+          "onbellek_token": [
+            597,
+            610,
+            597,
+            658
+          ],
+          "sinir_sure": 2.1
+        },
+        "detayli_sonra": {
+          "cikti": "Eğer sensör okuması birkaç saat sonra kayarsa, onu yeniden kalibre edin ve task'ı yeniden başlatmadan önce sapmayı loglayın.",
+          "sure": 8.82,
+          "istem_token": 662,
+          "istem_sn": 2.06,
+          "yukleme_sn": 1.29,
+          "uretilen_token": 33,
+          "onbellek_token": [
+            610,
+            597,
+            658
+          ],
+          "sinir_sure": 1.88
+        },
+        "baska_sonra": {
+          "cikti": "Eğer sensör okuması birkaç saat sonra kayarsa, onu yeniden kalibre edin ve task'ı yeniden başlatmadan önce sapmayı loglayın.",
+          "sure": 8.61,
+          "istem_token": 662,
+          "istem_sn": 2.11,
+          "yukleme_sn": 1.02,
+          "uretilen_token": 33,
+          "onbellek_token": [
+            610,
+            597,
+            658
+          ],
+          "sinir_sure": 2.04
+        }
+      }
+    },
+    {
+      "metin": "She said she would call back after lunch, but nobody has heard from her since then.",
+      "yon": "en-tr",
+      "kosullar": {
+        "tek": {
+          "cikti": "Öğle yemeğinden sonra geri arayacağını söyledi ama o zamandan beri kimse ondan haber alamadı.",
+          "sure": 7.04,
+          "istem_token": 642,
+          "istem_sn": 1.55,
+          "yukleme_sn": 1.21,
+          "uretilen_token": 26,
+          "onbellek_token": [
+            610,
+            597,
+            638
+          ],
+          "sinir_sure": 2.0
+        },
+        "tekrar": {
+          "cikti": "Öğle yemeğinden sonra geri arayacağını söyledi ama o zamandan beri kimse ondan haber alamadı.",
+          "sure": 7.06,
+          "istem_token": 642,
+          "istem_sn": 1.54,
+          "yukleme_sn": 1.23,
+          "uretilen_token": 26,
+          "onbellek_token": [
+            610,
+            597,
+            638
+          ],
+          "sinir_sure": 1.83
+        },
+        "detayli_sonra": {
+          "cikti": "Öğle yemeğinden sonra geri arayacağını söyledi ama o zamandan beri kimse ondan haber alamadı.",
+          "sure": 7.0,
+          "istem_token": 642,
+          "istem_sn": 1.59,
+          "yukleme_sn": 1.09,
+          "uretilen_token": 26,
+          "onbellek_token": [
+            610,
+            597,
+            638
+          ],
+          "sinir_sure": 1.94
+        },
+        "baska_sonra": {
+          "cikti": "Öğle yemeğinden sonra geri arayacağını söyledi ama o zamandan beri kimse ondan haber alamadı.",
+          "sure": 7.07,
+          "istem_token": 642,
+          "istem_sn": 1.55,
+          "yukleme_sn": 1.21,
+          "uretilen_token": 26,
+          "onbellek_token": [
+            610,
+            597,
+            638
+          ],
+          "sinir_sure": 2.0
+        }
+      }
+    }
+  ],
+  "bitis": "2026-11-19 17:49:31 +0300"
+}

@@ -1,0 +1,793 @@
+{
+  "baslangic": "2026-11-19 19:35:20 +0300",
+  "ayarlar": {
+    "model": "gemma4:12b-it-qat",
+    "ollama_adresi": "http://127.0.0.1:11434",
+    "yalniz_cpu": true,
+    "keep_alive": "15m",
+    "kaynak_dil": "tr"
+  },
+  "testler": [
+    {
+      "id": "K1",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Rehber, yol tarifi",
+      "metin": "Otelden çıkınca sağa dönün ve yaklaşık 300 metre düz yürüyün. İkinci trafik ışığından sola sapın; müze sol tarafta, eczanenin hemen yanında. Yürüyerek 10 dakika sürer ama yokuş biraz dik. Pazartesi günleri müze kapalı, bunu unutmayın.",
+      "dikkat": "sağ/sol, 300 metre, ikinci ışık, pazartesi kapalı"
+    },
+    {
+      "id": "K2",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Öğretmen, fen dersi",
+      "metin": "Bitkiler güneş ışığını kullanarak kendi besinlerini üretir; buna fotosentez diyoruz. Yapraklardaki yeşil renk, klorofil adı verilen bir maddeden gelir. Işık olmadan bu süreç gerçekleşmez. Yarın bu konuyu bir deneyle göstereceğim, defterlerinizi getirmeyi unutmayın.",
+      "dikkat": "\"ışık olmadan gerçekleşmez\", öğretmen üslubu"
+    },
+    {
+      "id": "K3",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Hava durumu spikeri",
+      "metin": "İyi akşamlar. Yarın Marmara Bölgesi'nde parçalı bulutlu bir hava bekleniyor. İstanbul'da sıcaklık gündüz 14, gece 8 derece civarında olacak. Kuzeydoğudan saatte 30 kilometreye varan rüzgâr esecek; öğleden sonra sağanak yağış ihtimali yüzde 40. Hafta sonuna doğru sıcaklıklar mevsim normallerinin altına düşecek.",
+      "dikkat": "14/8 derece, kuzeydoğu, 30 km, %40, normallerin altına"
+    },
+    {
+      "id": "K4",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Satış elemanı, ürün tanıtımı",
+      "metin": "Bu model hem hafif hem de çok sessiz çalışıyor. Bataryası tek şarjla yaklaşık 8 saat dayanıyor, iki yıl garantisi de var. Fiyatı 12.499 TL ama bu hafta peşin alana yüzde 10 indirim yapıyoruz. Beğenmezseniz 14 gün içinde iade edebilirsiniz.",
+      "dikkat": "12.499 TL → 12,499, %10, peşin, 14 gün"
+    },
+    {
+      "id": "K5",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Garson, menü önerisi",
+      "metin": "Bugünün çorbası mercimek, yanında limon ve kızarmış ekmekle geliyor. Ana yemek olarak ızgara levrek öneririm, çok taze. Acı sevmiyorsanız sosu ayrı getirebilirim. Tatlı olarak künefemiz meşhurdur ama biraz beklemeniz gerekir, sıcak hazırlanıyor.",
+      "dikkat": "levrek, \"acı sevmiyorsanız\", künefe"
+    },
+    {
+      "id": "K6",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Otel resepsiyonu",
+      "metin": "Hoş geldiniz! Odanız üçüncü katta, deniz manzaralı. Kahvaltı sabah 7 ile 10 arasında lobinin yanındaki restoranda veriliyor. Çıkış saati öğlen 12, isterseniz eşyalarınızı resepsiyonda bırakabilirsiniz. Wi-Fi şifresi kartın arkasında yazıyor.",
+      "dikkat": "\"kart\" burada oda kartı (board olmamalı), saatler"
+    },
+    {
+      "id": "K7",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Taksi şoförü, sohbet",
+      "metin": "Bu saatte köprü çok kalabalık oluyor, ben sahil yolundan gideyim. Biraz uzun ama trafiğe takılmayız. Siz buralı değilsiniz galiba? İstanbul'un en güzel mevsimi bence sonbahar.",
+      "dikkat": "konuşma dili, \"buralı değilsiniz galiba\""
+    },
+    {
+      "id": "K8",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Eczacı, ilaç kullanımı",
+      "metin": "Bu ilacı günde iki kez, sabah ve akşam yemekten sonra alın. Tedaviyi yedi gün boyunca bırakmadan sürdürün, kendinizi iyi hissetseniz bile. Alkolle birlikte kullanmayın. Herhangi bir döküntü olursa ilacı kesip doktorunuza başvurun.",
+      "dikkat": "olumsuzluklar, \"iyi hissetseniz bile\", \"ilacı kesip\""
+    },
+    {
+      "id": "K9",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Emlakçı, daire tanıtımı",
+      "metin": "Daire 2+1, 95 metrekare ve binanın beşinci katında. Güney cephe olduğu için gün boyu güneş alıyor. Aidat aylık 1.200 TL, otopark ücretsiz. Metroya beş dakika yürüme mesafesinde; tek eksiği asansörün biraz eski olması.",
+      "dikkat": "2+1, 95 m², güney, aidat, 1.200 TL"
+    },
+    {
+      "id": "K10",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Tamirci, araba",
+      "metin": "Arabanızın balataları bitmiş, önce onları değiştirmemiz lazım. Motor yağı da azalmış ama acil değil, bir sonraki bakımda yaparız. Fren sesi bu yüzden geliyordu. Yarın öğlene kadar hazır olur, işçilikle birlikte toplam 3.800 TL tutar.",
+      "dikkat": "balata = brake pads, \"acil değil\", 3.800 TL"
+    },
+    {
+      "id": "K11",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Spor hocası",
+      "metin": "Isınmadan başlamayın, sakatlanırsınız. Önce on dakika hafif tempoda koşun, sonra esneme hareketlerine geçeceğiz. Nefesinizi tutmayın, hareket sırasında düzenli nefes alın. Bugün ağırlıkları biraz artırıyoruz, zorlanırsanız hemen söyleyin.",
+      "dikkat": "olumsuz emirler, \"nefesinizi tutmayın\" (burada gerçek anlamda)"
+    },
+    {
+      "id": "K12",
+      "kaynak": "tr",
+      "hedef": "en",
+      "konu": "Arkadaş daveti",
+      "metin": "Cumartesi akşamı bizde ufak bir toplantı var, sen de gelsene. Fazla kalabalık olmayacak, beş altı kişiyiz. Bir şey getirmene gerek yok, yemekler bizden. Gelemezsen de dert etme, haber vermen yeter.",
+      "dikkat": "samimi üslup, \"yemekler bizden\", \"dert etme\""
+    },
+    {
+      "id": "E1",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Tur rehberi, tarih",
+      "metin": "This palace was built in the 15th century and served as the sultan's residence for nearly 400 years. On your left you can see the old kitchens, which once fed up to 4,000 people a day. Please don't touch the tiles; they're original and very fragile. We'll meet back here in 45 minutes.",
+      "dikkat": "15. yüzyıl, 4,000 → 4.000, sol, olumsuz rica, 45 dakika"
+    },
+    {
+      "id": "E2",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Öğretmen, matematik",
+      "metin": "Before we start, let me remind you that the exam is next Thursday, not Friday. Today we'll look at fractions: when you add them, the bottom numbers have to be the same. If they aren't, you need to find a common denominator first. Don't worry if this seems confusing at first; we'll practice it together.",
+      "dikkat": "\"Thursday, not Friday\", payda, olumsuzluklar"
+    },
+    {
+      "id": "E3",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Hava durumu spikeri",
+      "metin": "Good evening. A cold front moving in from the northwest will bring heavy rain to most of the region tomorrow morning. Temperatures will struggle to reach 10 degrees, and winds could gust up to 60 kilometres per hour along the coast. Things should clear up by Sunday, though it'll stay chilly.",
+      "dikkat": "kuzeybatı, \"struggle to reach 10\", 60 km/s, \"clear up\""
+    },
+    {
+      "id": "E4",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Satış elemanı",
+      "metin": "This one's our best-seller. It's not the cheapest, but the battery lasts twice as long as the others. It comes with a two-year warranty, and if you buy it today, we'll throw in a free case. Would you like to try it?",
+      "dikkat": "\"not the cheapest\", \"twice as long\", \"throw in\""
+    },
+    {
+      "id": "E5",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Havalimanı anonsu",
+      "metin": "Ladies and gentlemen, flight TK1984 to Istanbul is now boarding at gate 12. Passengers seated in rows 20 to 35 are kindly asked to board first. Please have your boarding pass and passport ready. Due to strong headwinds, our flight time will be about 20 minutes longer than scheduled.",
+      "dikkat": "TK1984, kapı 12, sıra 20–35, \"headwinds\", 20 dakika"
+    },
+    {
+      "id": "E6",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Müşteri hizmetleri",
+      "metin": "Thanks for calling. I can see your order was shipped yesterday, so it should arrive within two to three business days. If it doesn't show up by Friday, just give us a call back and we'll send a replacement at no extra cost. Is there anything else I can help you with?",
+      "dikkat": "iş günü, \"if it doesn't show up\", ücretsiz yenisi"
+    },
+    {
+      "id": "E7",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Doktor",
+      "metin": "It looks like a mild sprain, nothing's broken. Try to keep weight off that ankle for a few days and put ice on it for 15 minutes at a time. If the swelling hasn't gone down by next week, come back and we'll take an X-ray.",
+      "dikkat": "\"nothing's broken\", \"keep weight off\", \"hasn't gone down\""
+    },
+    {
+      "id": "E8",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Aşçı, yemek programı",
+      "metin": "First, chop the onions finely and fry them until they're golden, not brown. Add the garlic last, because it burns quickly. Then pour in the tomatoes and let it simmer for about 20 minutes. Season to taste, and don't forget a pinch of sugar to balance the acidity.",
+      "dikkat": "\"golden, not brown\", \"simmer\", \"season to taste\""
+    },
+    {
+      "id": "E9",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Emlak danışmanı",
+      "metin": "The flat is on the third floor and gets plenty of natural light in the afternoon. The kitchen was renovated last year, but the bathroom could use some work. Rent is £1,450 a month, bills not included. The landlord doesn't allow pets, I'm afraid.",
+      "dikkat": "£1,450, \"bills not included\", \"could use some work\", evcil hayvan yasağı"
+    },
+    {
+      "id": "E10",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Antrenör, takım konuşması",
+      "metin": "Great effort out there today, but we can't keep giving away easy goals. Our defence needs to stay tighter in the second half. Don't panic if they score first; we've come back from worse. Let's go out and enjoy it.",
+      "dikkat": "\"giving away easy goals\", \"we've come back from worse\""
+    },
+    {
+      "id": "E11",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Komşu sohbeti",
+      "metin": "Morning! Did you hear they're finally fixing the road next week? It's going to be noisy for a few days, but it's about time. By the way, your parcel came while you were out, so I took it in for you.",
+      "dikkat": "\"it's about time\", \"took it in\", samimi üslup"
+    },
+    {
+      "id": "E12",
+      "kaynak": "en",
+      "hedef": "tr",
+      "konu": "Klinikten sesli mesaj",
+      "metin": "Hi, this is Sarah from the dental clinic calling to confirm your appointment on Tuesday the 3rd at 2:30 pm. If you can't make it, please let us know at least 24 hours in advance, otherwise there may be a cancellation fee. See you then!",
+      "dikkat": "3'ü salı, 2:30 pm → 14.30, 24 saat, iptal ücreti"
+    }
+  ],
+  "kosular": {
+    "1": {
+      "K1": {
+        "zaman": "19:35:36",
+        "ilk_metin": 4.27,
+        "toplam": 15.98,
+        "durum": "bitti",
+        "cikti": "Turn right after leaving the hotel and walk straight for about 300 meters. Turn left at the second traffic light; the museum is on the left, right next to the pharmacy. It takes about 10 minutes to walk, but the hill is a bit steep. Don't forget that the museum is closed on Mondays.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K2": {
+        "zaman": "19:35:49",
+        "ilk_metin": 3.83,
+        "toplam": 12.74,
+        "durum": "bitti",
+        "cikti": "Plants produce their own food using sunlight; we call this photosynthesis. The green color in leaves comes from a substance called chlorophyll. This process does not occur without light. I will show this topic with an experiment tomorrow, don't forget to bring your notebooks.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K3": {
+        "zaman": "19:36:06",
+        "ilk_metin": 4.4,
+        "toplam": 17.49,
+        "durum": "bitti",
+        "cikti": "Good evening. Partly cloudy weather is expected in the Marmara Region tomorrow. In Istanbul, temperatures will be around 14 degrees during the day and 8 degrees at night. Winds will blow from the northeast reaching up to 30 kilometers per hour; there is a 40 percent chance of showers in the afternoon. Temperatures will drop below seasonal norms towards the weekend.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K4": {
+        "zaman": "19:36:24",
+        "ilk_metin": 4.12,
+        "toplam": 18.24,
+        "durum": "bitti",
+        "cikti": "This model is both lightweight and runs very quietly. Its battery lasts about 8 hours on a single charge, and it also comes with a two-year warranty. The price is 12,499 TL, but we are offering a 10 percent discount for those who pay in cash this week. If you don't like it, you can return it within 14 days.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K5": {
+        "zaman": "19:36:41",
+        "ilk_metin": 3.82,
+        "toplam": 16.82,
+        "durum": "bitti",
+        "cikti": "Today's soup is lentil, served with lemon and toasted bread. I recommend grilled sea bass for the main course; it's very fresh. If you don't like spicy food, I can bring the sauce on the side. Our kunefe is famous for dessert, but you'll have to wait a bit as it's prepared hot.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K6": {
+        "zaman": "19:36:58",
+        "ilk_metin": 4.58,
+        "toplam": 16.95,
+        "durum": "bitti",
+        "cikti": "Welcome! Your room is on the third floor with a sea view. Breakfast is served in the restaurant next to the lobby between 7 and 10 AM. Check-out time is 12 PM; if you wish, you can leave your belongings at the reception. The Wi-Fi password is written on the back of the board.",
+        "parca_sayisi": 1,
+        "terimler": [
+          "Wi-Fi",
+          "kart → board"
+        ],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K7": {
+        "zaman": "19:37:11",
+        "ilk_metin": 3.66,
+        "toplam": 12.87,
+        "durum": "bitti",
+        "cikti": "The bridge gets very crowded at this hour, so I'll take the coastal road. It's a bit longer, but we won't get stuck in traffic. You aren't from around here, are you? I think autumn is the best season in Istanbul.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K8": {
+        "zaman": "19:37:23",
+        "ilk_metin": 3.8,
+        "toplam": 12.01,
+        "durum": "bitti",
+        "cikti": "Take this medication twice a day, after breakfast and dinner. Continue the treatment for seven days without interruption, even if you feel better. Do not use it with alcohol. If any rash occurs, stop taking the medication and consult your doctor.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K9": {
+        "zaman": "19:37:40",
+        "ilk_metin": 4.0,
+        "toplam": 17.46,
+        "durum": "bitti",
+        "cikti": "The apartment is a 2+1, 95 square meters, and located on the fifth floor of the building. Since it faces south, it gets sunlight all day long. The monthly maintenance fee is 1,200 TL, and parking is free. It's a five-minute walk to the metro; the only downside is that the elevator is a bit old.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K10": {
+        "zaman": "19:37:57",
+        "ilk_metin": 3.77,
+        "toplam": 16.47,
+        "durum": "bitti",
+        "cikti": "Your car's brake pads are worn out; we need to replace them first. The engine oil is also low, but it's not urgent; we can do that during the next service. That's where the braking noise was coming from. It will be ready by tomorrow noon, and the total cost including labor is 3,800 TL.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K11": {
+        "zaman": "19:38:12",
+        "ilk_metin": 3.63,
+        "toplam": 14.77,
+        "durum": "bitti",
+        "cikti": "Don't start without warming up; you'll get injured. First, jog at a light pace for ten minutes, then we'll move on to stretching exercises. Don't hold your breath; breathe steadily while moving. We're increasing the weights a bit today; let me know immediately if you struggle.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K12": {
+        "zaman": "19:38:27",
+        "ilk_metin": 3.65,
+        "toplam": 15.67,
+        "durum": "bitti",
+        "cikti": "We're having a small gathering at our place on Saturday evening; why don't you come too? It won't be too crowded, just about five or six of us. No need to bring anything, the food is on us. If you can't make it, don't worry about it, just let me know.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E1": {
+        "zaman": "19:38:47",
+        "ilk_metin": 4.34,
+        "toplam": 19.55,
+        "durum": "bitti",
+        "cikti": "Bu saray 15. yüzyılda inşa edilmiş ve yaklaşık 400 yıl boyunca sultanın ikametgahı olarak hizmet vermiştir. Solunuzda, bir zamanlar günde 4.000 kişiye yemek veren eski mutfağı görebilirsiniz. Lütfen çinilere dokunmayın; bunlar orijinal ve çok kırılgandır. 45 dakika sonra burada buluşacağız.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E2": {
+        "zaman": "19:39:03",
+        "ilk_metin": 3.9,
+        "toplam": 16.6,
+        "durum": "bitti",
+        "cikti": "Başlamadan önce size sınavın Cuma değil, önümüzdeki Perşembe olduğunu hatırlatayım. Bugün kesirleri inceleyeceğiz: onları toplarken paydaların aynı olması gerekir. Eğer aynı değillerse, önce ortak bir payda bulmanız gerekir. İlk başta kafa karıştırıcı gelirse endişelenmeyin; birlikte pratik yapacağız.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E3": {
+        "zaman": "19:39:22",
+        "ilk_metin": 3.86,
+        "toplam": 18.61,
+        "durum": "bitti",
+        "cikti": "İyi akşamlar. Kuzeybatıdan gelen bir soğuk cephe, yarın sabah bölgenin büyük kısmına şiddetli yağış getirecek. Sıcaklıklar 10 dereceye ulaşmakta zorlanacak ve kıyı şeridinde rüzgar saatte 60 kilometreye kadar esebilecek. Pazar gününe kadar hava açılsa da soğuk seyredecek.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E4": {
+        "zaman": "19:39:35",
+        "ilk_metin": 3.63,
+        "toplam": 13.25,
+        "durum": "bitti",
+        "cikti": "Bu bizim en çok satan ürünümüz. En ucuzu değil ama bataryası diğerlerinin iki katı süre gidiyor. İki yıl garantisi var ve eğer bugün satın alırsanız yanına ücretsiz bir kılıf hediye ediyoruz. Denemek ister misiniz?",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E5": {
+        "zaman": "19:39:59",
+        "ilk_metin": 3.77,
+        "toplam": 23.77,
+        "durum": "bitti",
+        "cikti": "Sayın hanımefendiler ve beyefendiler, İstanbul'a gidecek TK1984 sefer sayılı uçuşumuz şu anda 12 numaralı kapıda uçağa alınıyor. 20 ile 35 arasındaki sıralarda oturan yolcularımızın öncelikli olarak uçağa binmeleri rica olunur. Lütfen biniş kartınızı ve pasaportunuzu hazır bulundurun. Güçlü karşı rüzgarlar nedeniyle uçuş süremiz planlanandan yaklaşık 20 dakika daha uzun sürecektir.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E6": {
+        "zaman": "19:40:15",
+        "ilk_metin": 3.75,
+        "toplam": 15.89,
+        "durum": "bitti",
+        "cikti": "Aradığınız için teşekkürler. Siparişinizin dün kargolandığını görebiliyorum, bu yüzden iki ila üç iş günü içinde ulaşması gerekir. Eğer Cuma gününe kadar gelmezse, bizi tekrar arayın; ek bir ücret ödemeden yerine yenisini göndeririz. Yardımcı olabileceğim başka bir şey var mı?",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E7": {
+        "zaman": "19:40:30",
+        "ilk_metin": 3.98,
+        "toplam": 14.77,
+        "durum": "bitti",
+        "cikti": "Hafif bir burkulma gibi görünüyor, kırık yok. Birkaç gün boyunca o bileğine ağırlık vermemeye çalış ve her seferinde 15 dakika boyunca buz uygula. Eğer önümüzdeki haftaya kadar şişlik inmezse geri gel, röntgen çekeriz.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E8": {
+        "zaman": "19:40:49",
+        "ilk_metin": 3.7,
+        "toplam": 19.0,
+        "durum": "bitti",
+        "cikti": "Öncelikle soğanları ince ince doğrayın ve kahverengiye dönmeden altın rengi alana kadar kavurun. Sarımsağı en son ekleyin çünkü çabuk yanar. Ardından domatesleri dökün ve yaklaşık 20 dakika kısık ateşte pişirin. Damak tadınıza göre baharatlandırın ve asiditeyi dengelemek için bir tutam şekeri unutmayın.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E9": {
+        "zaman": "19:41:04",
+        "ilk_metin": 3.61,
+        "toplam": 15.29,
+        "durum": "bitti",
+        "cikti": "Daire üçüncü katta ve öğleden sonraları bolca doğal ışık alıyor. Mutfak geçen yıl yenilendi ancak banyonun biraz tadilat görmesi gerekiyor. Kira aylık 1.450 sterlin, faturalar dahil değil. Maalesef ev sahibi evcil hayvanlara izin vermiyor.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E10": {
+        "zaman": "19:41:18",
+        "ilk_metin": 3.52,
+        "toplam": 14.13,
+        "durum": "bitti",
+        "cikti": "Bugün harika bir çaba gösterdiniz ama kolay goller yemeye devam edemeyiz. Savunmamız ikinci yarıda daha sıkı durmalı. İlk golü onlar atarsa panik yapmayın; daha kötü durumlardan geri döndük. Hadi çıkalım ve tadını çıkaralım.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E11": {
+        "zaman": "19:41:31",
+        "ilk_metin": 3.51,
+        "toplam": 13.26,
+        "durum": "bitti",
+        "cikti": "Günaydın! Önümüzdeki hafta sonunda yolu nihayet tamir edeceklerini duydun mu? Birkaç gün gürültülü olacak ama artık vakti gelmişti. Bu arada, sen dışarıdayken paketin geldi, o yüzden senin için içeri aldım.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E12": {
+        "zaman": "19:41:47",
+        "ilk_metin": 3.69,
+        "toplam": 15.71,
+        "durum": "bitti",
+        "cikti": "Merhaba, ben diş kliniğinden Sarah; 3 Salı günü saat 14:30'daki randevunuzu onaylamak için arıyorum. Eğer gelemiyorsanız lütfen bize en az 24 saat önceden haber verin, aksi takdirde bir iptal ücreti uygulanabilir. O zaman görüşmek üzere!",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      }
+    },
+    "2": {
+      "E12": {
+        "zaman": "19:42:03",
+        "ilk_metin": 3.61,
+        "toplam": 15.71,
+        "durum": "bitti",
+        "cikti": "Merhaba, ben diş kliniğinden Sarah; 3 Salı günü saat 14:30'daki randevunuzu onaylamak için arıyorum. Eğer gelemiyorsanız lütfen bize en az 24 saat önceden haber verin, aksi takdirde bir iptal ücreti uygulanabilir. O zaman görüşmek üzere!",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E11": {
+        "zaman": "19:42:16",
+        "ilk_metin": 3.39,
+        "toplam": 13.14,
+        "durum": "bitti",
+        "cikti": "Günaydın! Önümüzdeki hafta sonunda yolu nihayet tamir edeceklerini duydun mu? Birkaç gün gürültülü olacak ama artık vakti gelmişti. Bu arada, sen dışarıdayken paketin geldi, o yüzden senin için içeri aldım.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E10": {
+        "zaman": "19:42:30",
+        "ilk_metin": 3.66,
+        "toplam": 14.28,
+        "durum": "bitti",
+        "cikti": "Bugün harika bir çaba gösterdiniz ama kolay goller yemeye devam edemeyiz. Savunmamız ikinci yarıda daha sıkı durmalı. İlk golü onlar atarsa panik yapmayın; daha kötü durumlardan geri döndük. Hadi çıkalım ve tadını çıkaralım.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E9": {
+        "zaman": "19:42:46",
+        "ilk_metin": 3.79,
+        "toplam": 15.43,
+        "durum": "bitti",
+        "cikti": "Daire üçüncü katta ve öğleden sonraları bolca doğal ışık alıyor. Mutfak geçen yıl yenilendi ancak banyonun biraz tadilat görmesi gerekiyor. Kira aylık 1.450 sterlin, faturalar dahil değil. Maalesef ev sahibi evcil hayvanlara izin vermiyor.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E8": {
+        "zaman": "19:43:05",
+        "ilk_metin": 3.75,
+        "toplam": 19.03,
+        "durum": "bitti",
+        "cikti": "Öncelikle soğanları ince ince doğrayın ve kahverengiye dönmeden altın rengi alana kadar kavurun. Sarımsağı en son ekleyin çünkü çabuk yanar. Ardından domatesleri dökün ve yaklaşık 20 dakika kısık ateşte pişirin. Damak tadınıza göre baharatlandırın ve asiditeyi dengelemek için bir tutam şekeri unutmayın.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E7": {
+        "zaman": "19:43:19",
+        "ilk_metin": 3.9,
+        "toplam": 14.68,
+        "durum": "bitti",
+        "cikti": "Hafif bir burkulma gibi görünüyor, kırık yok. Birkaç gün boyunca o bileğine ağırlık vermemeye çalış ve her seferinde 15 dakika boyunca buz uygula. Eğer önümüzdeki haftaya kadar şişlik inmezse geri gel, röntgen çekeriz.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E6": {
+        "zaman": "19:43:35",
+        "ilk_metin": 3.8,
+        "toplam": 15.97,
+        "durum": "bitti",
+        "cikti": "Aradığınız için teşekkürler. Siparişinizin dün kargolandığını görebiliyorum, bu yüzden iki ila üç iş günü içinde ulaşması gerekir. Eğer Cuma gününe kadar gelmezse, bizi tekrar arayın; ek bir ücret ödemeden yerine yenisini göndeririz. Yardımcı olabileceğim başka bir şey var mı?",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E5": {
+        "zaman": "19:43:59",
+        "ilk_metin": 3.73,
+        "toplam": 23.74,
+        "durum": "bitti",
+        "cikti": "Sayın hanımefendiler ve beyefendiler, İstanbul'a gidecek TK1984 sefer sayılı uçuşumuz şu anda 12 numaralı kapıda uçağa alınıyor. 20 ile 35 arasındaki sıralarda oturan yolcularımızın öncelikli olarak uçağa binmeleri rica olunur. Lütfen biniş kartınızı ve pasaportunuzu hazır bulundurun. Güçlü karşı rüzgarlar nedeniyle uçuş süremiz planlanandan yaklaşık 20 dakika daha uzun sürecektir.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E4": {
+        "zaman": "19:44:12",
+        "ilk_metin": 3.61,
+        "toplam": 13.2,
+        "durum": "bitti",
+        "cikti": "Bu bizim en çok satan ürünümüz. En ucuzu değil ama bataryası diğerlerinin iki katı süre gidiyor. İki yıl garantisi var ve eğer bugün satın alırsanız yanına ücretsiz bir kılıf hediye ediyoruz. Denemek ister misiniz?",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E3": {
+        "zaman": "19:44:31",
+        "ilk_metin": 3.79,
+        "toplam": 18.53,
+        "durum": "bitti",
+        "cikti": "İyi akşamlar. Kuzeybatıdan gelen bir soğuk cephe, yarın sabah bölgenin büyük kısmına şiddetli yağış getirecek. Sıcaklıklar 10 dereceye ulaşmakta zorlanacak ve kıyı şeridinde rüzgar saatte 60 kilometreye kadar esebilecek. Pazar gününe kadar hava açılsa da soğuk seyredecek.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E2": {
+        "zaman": "19:44:47",
+        "ilk_metin": 3.86,
+        "toplam": 16.62,
+        "durum": "bitti",
+        "cikti": "Başlamadan önce size sınavın Cuma değil, önümüzdeki Perşembe olduğunu hatırlatayım. Bugün kesirleri inceleyeceğiz: onları toplarken paydaların aynı olması gerekir. Eğer aynı değillerse, önce ortak bir payda bulmanız gerekir. İlk başta kafa karıştırıcı gelirse endişelenmeyin; birlikte pratik yapacağız.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "E1": {
+        "zaman": "19:45:07",
+        "ilk_metin": 4.31,
+        "toplam": 19.47,
+        "durum": "bitti",
+        "cikti": "Bu saray 15. yüzyılda inşa edilmiş ve yaklaşık 400 yıl boyunca sultanın ikametgahı olarak hizmet vermiştir. Solunuzda, bir zamanlar günde 4.000 kişiye yemek veren eski mutfağı görebilirsiniz. Lütfen çinilere dokunmayın; bunlar orijinal ve çok kırılgandır. 45 dakika sonra burada buluşacağız.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K12": {
+        "zaman": "19:45:23",
+        "ilk_metin": 3.81,
+        "toplam": 15.82,
+        "durum": "bitti",
+        "cikti": "We're having a small gathering at our place on Saturday evening; why don't you come too? It won't be too crowded, just about five or six of us. No need to bring anything, the food is on us. If you can't make it, don't worry about it, just let me know.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K11": {
+        "zaman": "19:45:38",
+        "ilk_metin": 3.64,
+        "toplam": 14.79,
+        "durum": "bitti",
+        "cikti": "Don't start without warming up; you'll get injured. First, jog at a light pace for ten minutes, then we'll move on to stretching exercises. Don't hold your breath; breathe steadily while moving. We're increasing the weights a bit today; let me know immediately if you struggle.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K10": {
+        "zaman": "19:45:54",
+        "ilk_metin": 3.74,
+        "toplam": 16.44,
+        "durum": "bitti",
+        "cikti": "Your car's brake pads are worn out; we need to replace them first. The engine oil is also low, but it's not urgent; we can do that during the next service. That's where the braking noise was coming from. It will be ready by tomorrow noon, and the total cost including labor is 3,800 TL.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K9": {
+        "zaman": "19:46:11",
+        "ilk_metin": 4.06,
+        "toplam": 17.48,
+        "durum": "bitti",
+        "cikti": "The apartment is a 2+1, 95 square meters, and located on the fifth floor of the building. Since it faces south, it gets sunlight all day long. The monthly maintenance fee is 1,200 TL, and parking is free. It's a five-minute walk to the metro; the only downside is that the elevator is a bit old.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K8": {
+        "zaman": "19:46:24",
+        "ilk_metin": 3.84,
+        "toplam": 12.05,
+        "durum": "bitti",
+        "cikti": "Take this medication twice a day, after breakfast and dinner. Continue the treatment for seven days without interruption, even if you feel better. Do not use it with alcohol. If any rash occurs, stop taking the medication and consult your doctor.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K7": {
+        "zaman": "19:46:36",
+        "ilk_metin": 3.46,
+        "toplam": 12.87,
+        "durum": "bitti",
+        "cikti": "The bridge gets very crowded at this hour, so I'll take the coastal road. It's a bit longer, but we won't get stuck in traffic. You aren't from around here, are you? I think autumn is the best season in Istanbul.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K6": {
+        "zaman": "19:46:53",
+        "ilk_metin": 4.75,
+        "toplam": 16.83,
+        "durum": "bitti",
+        "cikti": "Welcome! Your room is on the third floor with a sea view. Breakfast is served in the restaurant next to the lobby between 7 and 10 AM. Check-out time is 12 PM; if you wish, you can leave your belongings at the reception. The Wi-Fi password is written on the back of the board.",
+        "parca_sayisi": 1,
+        "terimler": [
+          "Wi-Fi",
+          "kart → board"
+        ],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K5": {
+        "zaman": "19:47:10",
+        "ilk_metin": 4.02,
+        "toplam": 16.56,
+        "durum": "bitti",
+        "cikti": "Today's soup is lentil, served with lemon and toasted bread. I recommend grilled sea bass for the main course; it's very fresh. If you don't like spicy food, I can bring the sauce on the side. Our kunefe is famous for dessert, but you'll have to wait a bit as it's prepared hot.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K4": {
+        "zaman": "19:47:28",
+        "ilk_metin": 4.03,
+        "toplam": 18.13,
+        "durum": "bitti",
+        "cikti": "This model is both lightweight and runs very quietly. Its battery lasts about 8 hours on a single charge, and it also comes with a two-year warranty. The price is 12,499 TL, but we are offering a 10 percent discount for those who pay in cash this week. If you don't like it, you can return it within 14 days.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K3": {
+        "zaman": "19:47:46",
+        "ilk_metin": 4.65,
+        "toplam": 17.75,
+        "durum": "bitti",
+        "cikti": "Good evening. Partly cloudy weather is expected in the Marmara Region tomorrow. In Istanbul, temperatures will be around 14 degrees during the day and 8 degrees at night. Winds will blow from the northeast reaching up to 30 kilometers per hour; there is a 40 percent chance of showers in the afternoon. Temperatures will drop below seasonal norms towards the weekend.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K2": {
+        "zaman": "19:47:59",
+        "ilk_metin": 3.95,
+        "toplam": 12.84,
+        "durum": "bitti",
+        "cikti": "Plants produce their own food using sunlight; we call this photosynthesis. The green color in leaves comes from a substance called chlorophyll. This process does not occur without light. I will show this topic with an experiment tomorrow, don't forget to bring your notebooks.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      },
+      "K1": {
+        "zaman": "19:48:14",
+        "ilk_metin": 3.85,
+        "toplam": 15.48,
+        "durum": "bitti",
+        "cikti": "Turn right after leaving the hotel and walk straight for about 300 meters. Turn left at the second traffic light; the museum is on the left, right next to the pharmacy. It takes about 10 minutes to walk, but the hill is a bit steep. Don't forget that the museum is closed on Mondays.",
+        "parca_sayisi": 1,
+        "terimler": [],
+        "kalin_istegi": 0,
+        "kalin": [],
+        "sinir_istegi": 0
+      }
+    }
+  },
+  "bitis": "2026-11-19 19:48:14 +0300"
+}

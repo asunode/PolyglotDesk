@@ -1,0 +1,22 @@
+# Yerel geliştirme kayıtları (yayımlanmaz)
+doc/WORKLOG.md
+doc/design.md
+doc/DEVAM.md
+bilgi/
+
+# Python önbellekleri
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Sanal ortam ve editör dosyaları
+.venv/
+venv/
+.vscode/
+.idea/
+*.swp
+
+# İndirilen ham veri ve günlükler (veritabani/yukle.py girdisi; depoya girmez)
+*.jsonl.gz
+*.tsv.bz2
+*.log

@@ -1,0 +1,142 @@
+## EN→TR · Keep the reset line high while the bootloader runs, then release it.
+teknik bağlam: evet
+- fiiller_muaf: 4/5 kayıt; düşen: high
+- fiiller_dahil: 1/5 kayıt; düşen: keep, high, run, release
+- kural kapalıyken gönderilen kayıtlar:
+    keep: (verb) of livestock: to raise; to care for → bakmak; (verb) to continue → -ip durmak, devam etmek; (verb) to maintain possession of → saklamak, tutmak; (verb) to maintain the condition of; to preserve → saklamak
+    line: (noun) telephone or network connection → hat; (noun) geometry: infinite one-dimensional figure → doğru; (noun) path through two or more points, threadlike mark → çizgi; (noun) poetic: verse → dize, mısra
+    high: (adj) acoustics: of greater frequency → tiz, yüksek; (adj) elevated; tall → ali, uca, ulu; (adj) of great or large quantity → aşırı, yüksek; (adj) of meat: slightly tainted → ağırlaşmış, bozulayazmış
+    run: (noun) act of running → koşma, koşu; (verb) to move quickly on two feet → koşmak
+    release: (noun) event of setting free → serbest bırakma; (verb) to discharge → dışarı vermek; (verb) to free or liberate → hürriyetine kavuşturmak, serbest bırakmak; (verb) to let go of → bırakmak, salıvermek, tahliye etmek
+
+## EN→TR · The scheduler will drop the task if the watchdog fires before the buffer is flushed.
+teknik bağlam: evet
+- fiiller_muaf: 4/4 kayıt; düşen: yok
+- fiiller_dahil: 0/4 kayıt; düşen: drop, task, fire, flush
+- kural kapalıyken gönderilen kayıtlar:
+    drop: (noun) confection → meyan; (noun) small quantity of liquid, just large enough to hold its own round sha… → damla; (verb) to fall in drops or droplets → damlamak
+    task: (noun) piece of work done as part of one’s duties → görev, vazife, ödev; (verb) assign a task to → görevlendirmek, ödevlendirmek
+    fire: (noun) damaging occurrence of fire → yangın; (noun) heater or stove used in place of real fire → ocak; (noun) oxidation reaction → ateş, od; (verb) intransitive: to shoot → ateş etmek
+    flush: (adj) smooth, even, aligned; not sticking out → aynı düzeyde, bir hizâda, hem yüz; (adj) wealthy or well off → paralı, varlıklı; (noun) cleansing of a toilet → sifon; (verb) of toilet: to be cleansed with generous quantities of water → sifonu çekmek
+
+## EN→TR · Set the baud rate on the UART and hold the button until the LED turns green.
+teknik bağlam: evet
+- fiiller_muaf: 4/5 kayıt; düşen: rate
+- fiiller_dahil: 1/5 kayıt; düşen: set, rate, turn, green
+- kural kapalıyken gönderilen kayıtlar:
+    set: (adj) intent, determined → kararlı; (adj) of hair: fixed in a certain style → yapılmış; (adj) ready, prepared → hazır; (noun) collection of various objects for a particular purpose, such as a set… → takım
+    rate: (noun) the price of a(n individual) thing; cost → taksit; (noun) the proportional relationship between one amount, value etc. and anot… → oran; (noun) the relative speed of change or progress → ücret
+    button: (noun) in computer software, an on-screen control that can be selected → düğme; (noun) a badge worn on clothes → rozet; (noun) a mechanical device meant to be pressed with a finger → buton, düğme, tuş; (noun) botany: a bud → düğme
+    turn: (noun) chance to use (something) shared in sequence with others → keşik, nöbet, sıra; (noun) movement about an axis ending up with the same orientation → tur; (noun) one's chance to make a move in a game → sıra; (verb) become → dönmek
+    green: (adj) environmentally friendly → yeşil; (adj) having green as its colour → yeşil; (adj) inexperienced → acemi, tor, toy; (adj) lumber → yaş
+
+## EN→TR · If the MQTT broker goes down, the gateway stores the payload and retries later.
+teknik bağlam: evet
+- fiiller_muaf: 2/5 kayıt; düşen: broker, late, payload
+- fiiller_dahil: 1/5 kayıt; düşen: broker, go, late, payload
+- kural kapalıyken gönderilen kayıtlar:
+    broker: (noun) mediator between a buyer and seller → broker, komisyoncu, simsar; (noun) stockbroker → kambiyo ajanı
+    go: (noun) board game → go; (verb) to move through space (especially from one place to another) → gitmek
+    gateway: (noun) computer network access point → ağ geçidi; (noun) entrance → giriş, kapı
+    late: (adj) euphemism for "dead" → merhum, rahmetli; (adj) near the end of a period of time → geç; (adv) past a designated time → geç
+    payload: (noun) that part of a cargo that produces revenue → uçuş yükü; (noun) that part of a rocket, missile, or torpedo that is not concerned with… → uçuş yükü; (noun) the total weight of passengers, crew, equipment and cargo carried by… → uçuş yükü
+
+## EN→TR · Run the script again after you clear the cache and the build directory on the router.
+teknik bağlam: evet
+- fiiller_muaf: 3/4 kayıt; düşen: directory
+- fiiller_dahil: 1/4 kayıt; düşen: run, build, directory
+- kural kapalıyken gönderilen kayıtlar:
+    run: (noun) act of running → koşma, koşu; (verb) to move quickly on two feet → koşmak
+    script: (noun) (computing) procedure or program → betik; (noun) a system of writing → yazı; (noun) text of the dialogue and action for a drama → senaryo; (noun) written characters, style of writing → hat
+    build: (noun) physique → çerçeve; (verb) (transitive) to form by combining materials or parts → inşa etmek, kurmak, yapmak
+    directory: (noun) simulated folder → dizin, klasör; (noun) structured listing of files → dizin, klasör
+
+## EN→TR · The display shows a warning when the battery level falls below ten percent; the firmware then saves the state.
+teknik bağlam: evet
+- fiiller_muaf: 5/6 kayıt; düşen: level
+- fiiller_dahil: 4/6 kayıt; düşen: level, state
+- kural kapalıyken gönderilen kayıtlar:
+    display: (noun) electronic screen → ekran; (noun) spectacle → dürbün
+    show: (noun) broadcast program(me) → gösteri, program, şov; (noun) entertainment → gösteri, şov; (noun) exhibition — see also exhibition, exposition → şov; (verb) to display → göstermek
+    battery: (noun) device storing electricity → akü, pil; (noun) set of cages for hens → folluk
+    level: (noun) degree or amount → düzey, seviye; (noun) gaming: discrete segment of a game → bölüm, level; (noun) gaming: numeric value for something or someone's experience and power → level; (noun) tool → su terazisi
+    save: (verb) computing: to write (a file) to a storage medium → kaydetmek; (verb) to accumulate money → para biriktirmek; (verb) to conserve or prevent the wasting of → tasarruf etmek; (verb) to economize → tasarruf etmek
+    state: (noun) a condition → durum, hâl; (noun) a political division of a federation retaining a degree of autonomy → devlet, eyalet, il; (noun) a/the State, the sovereign country or city state with a central gover… → devlet; (verb) declare to be a fact — see also assert, declare, affirm → bildirmek
+
+## EN→TR · Mount the sensor on the board and check the signal on the SPI bus with the oscilloscope.
+teknik bağlam: evet
+- fiiller_muaf: 1/3 kayıt; düşen: mount, check
+- fiiller_dahil: 1/3 kayıt; düşen: mount, check
+- kural kapalıyken gönderilen kayıtlar:
+    mount: (noun) a mounting → çerçeve; (noun) horse → binek hayvanı
+    check: (noun) bill, particularly at a restaurant — see also bill → hesap; (noun) chess: when the king is directly threatened by an enemy piece → şah; (noun) control, limit or stop → kontrol; (noun) inspection or examination → kontrol
+    signal: (noun) telecommunication: electromagnetic action that conveys information → sinyal; (noun) sign made to give notice → işaret, sinyal
+
+## EN→TR · The interrupt handler must not block; it should only raise a flag for the main loop.
+teknik bağlam: evet
+- fiiller_muaf: 4/4 kayıt; düşen: yok
+- fiiller_dahil: 2/4 kayıt; düşen: block, raise
+- kural kapalıyken gönderilen kayıtlar:
+    interrupt: (noun) an event that causes a computer to temporarily cease → iş kesme, kesme; (verb) computing: to assert that an exceptional condition must be handled → iş kesmek, kesmek; (verb) to assert an exceptional condition → kesmek; (verb) to disturb or halt an ongoing process or action → araya girmek, kesilmek, kesmek
+    block: (noun) group of buildings demarcated by streets → ada, kadastro adası; (verb) to disable communication → engellemek; (verb) to fill, making it impossible to pass → engellemek; (verb) to prevent passing → engellemek
+    raise: (noun) increase in wages → zam; (verb) to cause to rise → kaldırmak; (verb) to collect → biriktirmek; (verb) to make (bread, etc.) light, as by yeast or leaven → kabartmak
+    loop: (noun) programmed sequence of instructions → döngü; (noun) length of thread, line or rope → ilik; (noun) shape produced by a curve that bends around and crosses itself → döngü
+
+## TR→EN · Watchdog tetiklenirse task yeniden başlar ve buffer temizlenir.
+teknik bağlam: evet
+- fiiller_muaf: 0/1 kayıt; düşen: yeniden
+- fiiller_dahil: 0/1 kayıt; düşen: yeniden
+- kural kapalıyken gönderilen kayıtlar:
+    yeniden: (adv) anew; (adv) again
+
+## TR→EN · Kartı UART üzerinden bağlayıp firmware'i yeniden yükledim ama ekran açılmadı.
+teknik bağlam: evet
+- fiiller_muaf: 2/4 kayıt; düşen: kart, yeniden
+- fiiller_dahil: 1/4 kayıt; düşen: kart, bağlamak, yeniden
+- kural kapalıyken gönderilen kayıtlar:
+    kart: (adj) hoary, old; (noun) card
+    bağlamak: (verb) to bind; (verb) to connect; (verb) to fasten; (verb) to put through
+    yeniden: (adv) anew; (adv) again
+    ekran: (noun) screen (display of a technological device); (noun) monitor
+
+## TR→EN · Sensörü I2C hattına taktım; okuma değerleri birkaç dakika sonra kayıyor.
+teknik bağlam: evet
+- fiiller_muaf: 3/4 kayıt; düşen: hattına
+- fiiller_dahil: 0/4 kayıt; düşen: kaymak, hattına, takmak, okumak
+- kural kapalıyken gönderilen kayıtlar:
+    kaymak: (noun) kaymak; (noun) best part of something; (verb) to slide; to slip, skid; (verb) to shift
+    hattına: (noun) second-person singular single-possession locative of hat; (noun) third-person single-possession locative of hat
+    takmak: (verb) to wear, put on; (verb) to attach, fasten, affix, put something on; to pin something to; to h…; (verb) to give (a name) to; (verb) to pick on, single someone out for harassment
+    okumak: (verb) to read; (verb) to study, peruse; (verb) to sing; to chant, recite; (verb) to announce
+
+## TR→EN · Gateway, MQTT bağlantısı koparsa payload'u saklayıp daha sonra tekrar gönderir.
+teknik bağlam: evet
+- fiiller_muaf: 3/3 kayıt; düşen: yok
+- fiiller_dahil: 0/3 kayıt; düşen: kopmak, saklamak, göndermek
+- kural kapalıyken gönderilen kayıtlar:
+    kopmak: (verb) to break, snap in two; fracture; (verb) break off, fall off; (verb) to break out, appear, occur, begin; (verb) to break away, leave, move away, to be separated
+    saklamak: (verb) to hide; to put (something) in a place where it will be harder to dis…; (verb) to keep, store, save; (verb) to protect, preserve, shield
+    göndermek: (verb) to send, send off, dispatch; (verb) to authorize the transportation of something; (verb) to reference
+
+## TR→EN · Pil seviyesi düşünce sistem uyku moduna geçiyor ve ayarları NVS'e yazıyor.
+teknik bağlam: evet
+- fiiller_muaf: 2/5 kayıt; düşen: uyku, mod, ayar
+- fiiller_dahil: 0/5 kayıt; düşen: uyku, mod, geçmek, ayar, yazmak
+- kural kapalıyken gönderilen kayıtlar:
+    uyku: (noun) sleep, nap; (noun) sleepiness
+    mod: (noun) mode; (noun) mood
+    geçmek: (verb) to pass, pass through, pass over, cross; (verb) to pass by, go by, pass through; (verb) to pass, elapse, to be spent in; (verb) to penetrate, affect, pass on to, pass over to
+    ayar: (noun) setting; (noun) adjustment
+    yazmak: (verb) to write, write down, inscribe; (verb) to burn (CD, DVD); (verb) to compose; (verb) to enroll, register; to enlist, sign, record, note down
+
+## TR→EN · Interrupt içinde uzun işlem yapma; sadece bir bayrak kaldır ve ana döngüde işle.
+teknik bağlam: evet
+- fiiller_muaf: 3/4 kayıt; düşen: döngü
+- fiiller_dahil: 2/4 kayıt; düşen: yapmak, döngü
+- kural kapalıyken gönderilen kayıtlar:
+    işlem: (noun) process; (noun) operation, procedure; (noun) operation; (noun) process
+    yapmak: (verb) to make; to build, construct, fashion; to create; to manufacture; to…; (verb) to do; to busy oneself with, act, behave; (verb) to repair, fix; (verb) to defecate
+    kaldırmak: (verb) to be able to run or operate a software, video game etc.; (verb) to lift up, raise, elevate; (verb) to make (someone) stand up; to get someone up (from bed); (verb) to remove, take away, to put something away or out of reach
+    döngü: (noun) a repetetive action or set of actions, cycle, loop; (noun) vicious cycle
+
+Toplam anlam kaydı: kapali 57, fiiller_muaf 40, fiiller_dahil 14

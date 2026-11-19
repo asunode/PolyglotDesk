@@ -1,0 +1,31 @@
+# veritabani/yukle.py AYIKLAMA kuralıyla atılan en_ceviri satırları (2026-11-19 yüklemesi)
+# en_kelime	tr_kelime	neden
+-teen	on ...	noktalama
+Winnie the Pooh	Winnie the Pooh	ingilizce_parca
+beat it	kaybol!	noktalama
+beat it	bas git!	noktalama
+beat it	defol!	noktalama
+both	hem... hem...	noktalama
+condor	And kondoru	ingilizce_parca
+dally	`primarily to delay unnecessarily`)	ingilizce_parca
+excuse me	izin verir misiniz?	noktalama
+excuse me	müsade eder misin?	noktalama
+excuse me	müsade eder misiniz?	noktalama
+excuse me	affedersin!	noktalama
+excuse me	affedersiniz!	noktalama
+excuse me	özür dilerim!	noktalama
+excuse me	efendim?	noktalama
+excuse me	izin verir misin?	noktalama
+get a life	bir hayatın olsun!	noktalama
+long absent, soon forgotten	is also far away from the heart".	ingilizce_parca
+long live	... çok yaşa!	noktalama
+long live	yaşasın ...!	noktalama
+neighborhood	komşuluk ('Komşuluk öldü mü?')	noktalama
+pump and dump	pump and dump	ingilizce_parca
+quotation marks	tırnak işareti [«◌»] or [“◌”]	ingilizce_parca
+rennet	yoğurt mayası (for yoghurt)	ingilizce_parca
+shadow puppet	Karagöz and Hacivat	ingilizce_parca
+vocational	meslek ...	noktalama
+would	In the winters	ingilizce_parca
+would	We sat on the bench	ingilizce_parca
+would	daha sıcak olurduk!	noktalama

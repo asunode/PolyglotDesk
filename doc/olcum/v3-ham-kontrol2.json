@@ -1,0 +1,28 @@
+{
+  "sonuclar": {
+    "G1": {
+      "ilk_parca": 3.44,
+      "toplam": 11.76,
+      "durum": "bitti",
+      "cikti": "We sat down at the beginning of January and roasted chestnuts over an open fire.\nThe lace of my shoe came undone in the garden of the country house.\nWhen the door rang, the neighbor's son was playing the guitar.",
+      "terimler": []
+    },
+    "G2": {
+      "ilk_parca": 3.39,
+      "toplam": 11.6,
+      "durum": "bitti",
+      "cikti": "İlk deneme için sonuçlar hiç de kötü değildi.\nFanın hiç durmadan dönmediğini fark etmemek elde değil.\nFlash yazımı, silme döngüsü tamamlanana kadar **başlamaz**.",
+      "terimler": []
+    },
+    "G3": {
+      "ilk_parca": 4.38,
+      "toplam": 11.31,
+      "durum": "bitti",
+      "cikti": "The board's brownout reset is being triggered frequently; the same error persists in the logs even after replacing the capacitor. I'm going to put the board in a credit card-sized box.",
+      "terimler": [
+        "brownout",
+        "kart → board"
+      ]
+    }
+  }
+}

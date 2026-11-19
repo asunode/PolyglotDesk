@@ -1,0 +1,133 @@
+{
+  "baslangic": "2026-11-19 20:21:06 +0300",
+  "testler": [
+    {
+      "id": "K6",
+      "set": "hizli-konu-seti-v1.md",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Hoş geldiniz! Odanız üçüncü katta, deniz manzaralı. Kahvaltı sabah 7 ile 10 arasında lobinin yanındaki restoranda veriliyor. Çıkış saati öğlen 12, isterseniz eşyalarınızı resepsiyonda bırakabilirsiniz. Wi-Fi şifresi kartın arkasında yazıyor.",
+      "dikkat": "\"kart\" burada oda kartı (board olmamalı), saatler",
+      "durum": "bitti",
+      "cikti": "Welcome! Your room is on the third floor with a sea view. Breakfast is served in the restaurant next to the lobby between 7 and 10 AM. Check-out time is at 12 PM; if you'd like, you can leave your belongings at the reception. The Wi-Fi password is written on the back of the card.",
+      "ilk_metin": 4.9,
+      "toplam": 17.78,
+      "teknik": false,
+      "terimler": [
+        "Wi-Fi"
+      ],
+      "kalin": [],
+      "sinir_istegi": 0,
+      "eski": "Welcome! Your room is on the third floor with a sea view. Breakfast is served in the restaurant next to the lobby between 7 and 10 AM. Check-out time is 12 PM; if you wish, you can leave your belongings at the reception. The Wi-Fi password is written on the back of the board."
+    },
+    {
+      "id": "D5",
+      "set": "detayli-test-seti-v1.md",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Kartı yeniden flash'ladım ama watchdog yine tetiklendi. Hatayı log'lardan buldum: stack overflow. Kartın yanındaki kartvizitte yazan numarayı arayıp destek istedim.",
+      "dikkat": "kart, kartvizit",
+      "durum": "bitti",
+      "cikti": "I flashed the board again, but the watchdog was triggered again. I found the error in the logs: stack overflow. I called the number on the business card next to the board and asked for support.",
+      "ilk_metin": 4.2,
+      "toplam": 11.21,
+      "teknik": true,
+      "terimler": [
+        "watchdog",
+        "stack",
+        "log",
+        "kart → board"
+      ],
+      "kalin": [],
+      "sinir_istegi": 0,
+      "eski": "I flashed the board again, but the watchdog was triggered again. I found the error in the logs: stack overflow. I called the number on the business card next to the board and asked for support."
+    },
+    {
+      "id": "W1",
+      "set": "dogrulama-seti-v2.md",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Kartı USB'den **çıkarmayın**; firmware yazılırken bağlantı kesilirse kart açılmayabilir.",
+      "dikkat": "kalın yazı \"not\" üzerinde olmalı, kart",
+      "durum": "bitti",
+      "cikti": "Do **not** unplug the board from the USB; if the connection is lost while the firmware is being written, the board may not boot.",
+      "ilk_metin": 3.7,
+      "toplam": 8.99,
+      "teknik": true,
+      "terimler": [
+        "firmware",
+        "kart → board"
+      ],
+      "kalin": [
+        "kod (olumsuzluk sırası): Do **not** unplug the board from the USB; if the connection is lost while the firmware is being written, the board may not boot."
+      ],
+      "sinir_istegi": 0,
+      "eski": "Do **not** unplug the board from the USB; if the connection is lost while the firmware is being written, the board may not boot."
+    },
+    {
+      "id": "W3",
+      "set": "dogrulama-seti-v2.md",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "SD kartı takınca kart tanınmadı; kayıtlarda okuma hatası görünüyor, kartı başka bir okuyucuda deneyeceğim.",
+      "dikkat": "kart (burada SD kart), kayıtlar",
+      "durum": "bitti",
+      "cikti": "The card wasn't recognized when I plugged in the SD card; a read error appears in the logs, so I will try the card in another reader.",
+      "ilk_metin": 3.87,
+      "toplam": 9.29,
+      "teknik": true,
+      "terimler": [
+        "SD kart → SD card",
+        "kayıtlar → logs",
+        "kayıt → log"
+      ],
+      "kalin": [],
+      "sinir_istegi": 0,
+      "eski": "The card wasn't recognized when I plugged in the SD card; a read error appears in the logs, so I will try the card in another reader."
+    },
+    {
+      "id": "G3",
+      "set": "kontrol-seti-v2.md",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Kartın brownout reset'i sık sık tetikleniyor; kondansatörü değiştirdikten sonra bile log'larda aynı hata var. Kartı kredi kartı boyutunda bir kutuya koyacağım.",
+      "dikkat": "ilk \"kart\" = board, \"kredi kartı\" = credit card (aynı metinde ikisi de var).",
+      "durum": "bitti",
+      "cikti": "The board's brownout reset is being triggered frequently; the same error persists in the logs even after replacing the capacitor. I'm going to put the board in a credit card-sized box.",
+      "ilk_metin": 4.22,
+      "toplam": 11.25,
+      "teknik": true,
+      "terimler": [
+        "brownout",
+        "log",
+        "kart → board"
+      ],
+      "kalin": [],
+      "sinir_istegi": 0,
+      "eski": "The board's brownout reset is being triggered frequently; the same error persists in the logs even after replacing the capacitor. I'm going to put the board in a credit card-sized box."
+    },
+    {
+      "id": "V5",
+      "set": "dogrulama-seti-v1.md",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Log'ları temizledim ama SD karttaki kayıtlar hâlâ duruyor; kartı formatlamadan önce yedek alacağım.",
+      "dikkat": "kart (burada SD kart), kayıtlar",
+      "durum": "bitti",
+      "cikti": "I cleared the logs, but the records on the SD card are still there; I will take a backup before formatting the card.",
+      "ilk_metin": 4.13,
+      "toplam": 8.5,
+      "teknik": true,
+      "terimler": [
+        "log",
+        "SD kart → SD card",
+        "kayıtlar → logs",
+        "kayıt → log"
+      ],
+      "kalin": [],
+      "sinir_istegi": 0,
+      "eski": "I cleared the logs, but the records on the SD card are still there; I will take a backup before formatting the card."
+    }
+  ],
+  "bitis": "2026-11-19 20:22:13 +0300"
+}

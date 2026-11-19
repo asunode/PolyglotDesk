@@ -1,0 +1,1036 @@
+{
+  "baslangic": "2026-11-18 23:00:35 +0300",
+  "ayarlar": {
+    "model": "gemma4:12b-it-qat",
+    "ollama_adresi": "http://127.0.0.1:11434",
+    "yalniz_cpu": true,
+    "keep_alive": "15m",
+    "kaynak_dil": "tr"
+  },
+  "testler": [
+    {
+      "id": "D1",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Sabahtan beri yüzü gülmüyordu ama gül bahçesine girince yüzünde bir gülümseme belirdi. Ağabeyim de ona \"Gözün aydın, sonunda bahçe bitti!\" dedi.",
+      "dikkat": "gül, yüz, gözün aydın",
+      "hizli": {
+        "ilk_metin": 3.54,
+        "toplam": 10.77,
+        "durum": "bitti",
+        "cikti": "He hadn't smiled since this morning, but a smile appeared on his face as soon as he entered the rose garden. My older brother also said to him, \"Good news, the garden is finally finished!\""
+      },
+      "detayli": {
+        "ilk_metin": 13.96,
+        "toplam": 37.3,
+        "sure": {
+          "arama": 0.94,
+          "ceviri": 19.7,
+          "denetim": 16.65
+        },
+        "durum": "bitti",
+        "parca_sayisi": 1,
+        "taslak": "He hadn't smiled since this morning, but a smile appeared on his face when he entered the rose garden. My brother also said to him, \"Congratulations! The garden is finally finished!\"",
+        "son": "He hadn't been smiling since the morning, but a smile appeared on his face when he entered the rose garden. My older brother also said to him, \"Congratulations! The garden is finally finished!\"",
+        "sorunlar_once": [],
+        "sorunlar_sonra": [],
+        "kayitlar": [
+          {
+            "tur": "kalip",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "gözün aydın",
+            "istem": "\"gözün aydın\" (phrase): congratulations!"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "sabah",
+            "istem": "sabah: (adv) in the morning; (noun) morning; (noun) dawn prayer, fajr"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "yüz",
+            "istem": "yüz: (noun) face; (noun) lining; (noun) face, surface, cutting edge; (noun) side, aspect"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "gülle",
+            "istem": "gülle: (noun) A spherical cannonball made out of stone or metal.; (noun) A modern tank or artillery shell that is cylindrical with a pointy en…; (noun) The iron ball used for shot put games; a shot."
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "girmek",
+            "istem": "girmek: (verb) to enter, to go in; (verb) to go in for, to take; (verb) (a season, time &c.) to arrive"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "bir",
+            "istem": "bir: (adv) only, solely, merely; (noun) mono; (adj) one; (adj) Used to emphasize a particular quality about something"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "belirmek",
+            "istem": "belirmek: (verb) to appear, to manifest; (verb) to become obvious or distinguishable, to form, to take shape; (verb) to become clear"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Onun yüzünde bir gülümseme yayılıyordu.",
+            "istem": "Turkish: Onun yüzünde bir gülümseme yayılıyordu. | English: A smile spread across her face."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Sonunda bitti.",
+            "istem": "Turkish: Sonunda bitti. | English: It's finally over."
+          }
+        ]
+      }
+    },
+    {
+      "id": "D2",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Öğleden sonra dolu yağdı; bahçedeki domatesler mahvoldu.\nDepo dolu, yarın sabah erkenden yola çıkabiliriz.\nBu akşam yüz kişilik bir yemek var, çay kenarındaki salonda.",
+      "dikkat": "dolu, yüz, çay",
+      "hizli": {
+        "ilk_metin": 3.54,
+        "toplam": 11.91,
+        "durum": "bitti",
+        "cikti": "It rained heavily this afternoon; the tomatoes in the garden were ruined.\nThe warehouse is full, we can hit the road early tomorrow morning.\nThere's a dinner for a hundred people this evening, in the hall by the tea area."
+      },
+      "detayli": {
+        "ilk_metin": 12.62,
+        "toplam": 39.22,
+        "sure": {
+          "arama": 1.0,
+          "ceviri": 19.8,
+          "denetim": 18.42
+        },
+        "durum": "bitti",
+        "parca_sayisi": 1,
+        "taslak": "Hail fell this afternoon; the tomatoes in the garden were ruined.\nThe warehouse is full, we can head out early tomorrow morning.\nThere is a dinner for a hundred people this evening, in the hall by the tea area.",
+        "son": "Hail fell this afternoon; the tomatoes in the garden were ruined.\nThe warehouse is full, we can head out early tomorrow morning.\nThere is a dinner for a hundred people this evening, in the hall by the tea area.",
+        "sorunlar_once": [],
+        "sorunlar_sonra": [],
+        "kayitlar": [
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "sonra",
+            "istem": "sonra: (noun) aftermath; (adv) later, after, afterwards, post-; (adv) thereafter, subsequently, following; (adv) hereafter, in the future"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "dolu",
+            "istem": "dolu: (adj) full; (noun) hail"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "yar",
+            "istem": "yar: (noun) cliff, scarp, precipice; (noun) love, beloved"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "sabah",
+            "istem": "sabah: (adv) in the morning; (noun) morning; (noun) dawn prayer, fajr"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "erke",
+            "istem": "erke: (noun) energy; (noun) power for success"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "yol",
+            "istem": "yol: (noun) path, road, way; (noun) voyage"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Yarın yola çıkabilirim.",
+            "istem": "Turkish: Yarın yola çıkabilirim. | English: I can head out tomorrow."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Yola erken çıkabilir miyim?",
+            "istem": "Turkish: Yola erken çıkabilir miyim? | English: Can I take off early?"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Bu öğleden sonra yağmur yağdı.",
+            "istem": "Turkish: Bu öğleden sonra yağmur yağdı. | English: It rained this afternoon."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Dün öğleden sonra yağmur yağdı.",
+            "istem": "Turkish: Dün öğleden sonra yağmur yağdı. | English: It rained yesterday afternoon."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Salonda yüz kişi vardı.",
+            "istem": "Turkish: Salonda yüz kişi vardı. | English: There were a hundred people in the hall."
+          }
+        ]
+      }
+    },
+    {
+      "id": "D3",
+      "kaynak": "en",
+      "hedef": "tr",
+      "metin": "It's not that I don't trust you; I just don't want to put all my eggs in one basket. Let's not jump the gun and wait for the final numbers.",
+      "dikkat": "not that, put all my eggs in one basket, jump the gun",
+      "hizli": {
+        "ilk_metin": 3.75,
+        "toplam": 10.02,
+        "durum": "bitti",
+        "cikti": "Sana güvenmediğimden değil; sadece tüm yumurtalarımı aynı sepete koymak istemiyorum. Henüz acele etmeyelim ve son rakamları bekleyelim."
+      },
+      "detayli": {
+        "ilk_metin": 19.53,
+        "toplam": 40.95,
+        "sure": {
+          "arama": 0.76,
+          "ceviri": 24.64,
+          "denetim": 15.55
+        },
+        "durum": "bitti",
+        "parca_sayisi": 1,
+        "taslak": "Sana güvenmediğimden değil; sadece tüm yumurtalarımı bir sepete koymak istemiyorum. Acele edip son rakamları bekleyelim.",
+        "son": "Sana güvenmediğimden değil; sadece tüm yumurtalarımı bir sepete koymak istemiyorum. Acele etmeyelim ve son rakamları bekleyelim.",
+        "sorunlar_once": [],
+        "sorunlar_sonra": [],
+        "kayitlar": [
+          {
+            "tur": "kalip",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "don't put all your eggs in one basket",
+            "istem": "\"don't put all your eggs in one basket\" (proverb): Do not dedicate all your resources to one project.; Do not count on any one thing to safeguard what is valuable."
+          },
+          {
+            "tur": "kalip",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "jump the gun",
+            "istem": "\"jump the gun\" (verb): To begin a race too soon, before the starting gun goes off.; To act or begin too soon or without due caution.; To trade securities based on information that is… [idiomatic]"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "trust",
+            "istem": "trust: (noun) a group of businessmen or traders → tröst; (noun) confidence in or reliance on some person or quality → güven, güvenç, itibar; (verb) to place confidence in → güvenmek"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "want",
+            "istem": "want: (noun) desire, wish, longing → istek; (verb) to desire → istemek"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "basket",
+            "istem": "basket: (noun) basketball: act of putting the ball through the basket → basket; (noun) container → sele, sepet; (noun) notional place to store items before ordering them online → sepet"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "jump",
+            "istem": "jump: (verb) cause oneself to leave an elevated location and fall downward → atlamak; (verb) propel oneself rapidly upward such that momentum causes the body to b… → sekmek, zıplamak"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "gun",
+            "istem": "gun: (noun) less portable, long weapon → tüfek; (noun) military: cannon with relatively long barrel, operating with relative… → top; (noun) military: cannon with tube length 30 calibers or more → top; (noun) portable, short weapon, for hand use → tabanca"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "final",
+            "istem": "final: (noun) sports: last round in a contest → final; (noun) test or examination given at the end of a term or class → final"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Don't put all your eggs in one basket.",
+            "istem": "English: Don't put all your eggs in one basket. | Turkish: Tüm kaynaklarını aynı işe yatırma."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Let's not wait for the others.",
+            "istem": "English: Let's not wait for the others. | Turkish: Diğerlerini beklemeyelim."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Let's not jump the gun.",
+            "istem": "English: Let's not jump the gun. | Turkish: Acele etmeyelim."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Put all your eggs in one basket and then watch that basket.",
+            "istem": "English: Put all your eggs in one basket and then watch that basket. | Turkish: Bütün yumurtalarını bir sepete koy ve sonra sepeti izle."
+          }
+        ]
+      }
+    },
+    {
+      "id": "D4",
+      "kaynak": "en",
+      "hedef": "tr",
+      "metin": "Make sure the board is **not** powered while you solder the header pins. If the brownout detector keeps firing, the issue is rarely the firmware itself.",
+      "dikkat": "board, rarely",
+      "hizli": {
+        "ilk_metin": 3.65,
+        "toplam": 10.36,
+        "durum": "bitti",
+        "cikti": "Header pinlerini lehimlerken kartın güç almadığından emin olun. Eğer brownout dedektörü ateşlemeye devam ediyorsa, sorun nadiren firmware'nin kendisidir."
+      },
+      "detayli": {
+        "ilk_metin": 14.97,
+        "toplam": 41.24,
+        "sure": {
+          "arama": 0.75,
+          "ceviri": 21.65,
+          "denetim": 18.85
+        },
+        "durum": "bitti",
+        "parca_sayisi": 1,
+        "taslak": "Header pinlerini lehimlerken tahtanın güç almadığından emin olun. Eğer brownout dedektörü ateşlemeye devam ediyorsa, sorun nadiren firmware'in kendisidir.",
+        "son": "Header pinlerini lehimlerken tahtanın güç almadığından **emin olun**. Eğer brownout dedektörü ateşlemeye devam ediyorsa, sorun nadiren firmware'in kendisidir.",
+        "sorunlar_once": [
+          "The source has 1 bold passage(s) (**not**) but the draft has 0. Mark the corresponding words in the translation as bold with **…**."
+        ],
+        "sorunlar_sonra": [],
+        "kayitlar": [
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "firmware",
+            "istem": "firmware: keep in English"
+          },
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "brownout",
+            "istem": "brownout: keep in English"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "board",
+            "istem": "board: (noun) long, wide and thin piece of wood or other material → tahta; (noun) managing committee → heyet, kurul; (noun) short for blackboard, whiteboard, etc. → tahta; (noun) side of a ship → borda, sancak"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "power",
+            "istem": "power: (noun) ability to affect or influence → güç, kuvvet; (noun) electricity, electricity supply → güç; (noun) maths: product of equal factors → kuvvet, üs; (noun) people in charge of legal or political power → iktidar"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "solder",
+            "istem": "solder: (noun) any of various alloys that are used to join small pieces of metal tog… → lehim; (verb) to join with solder → lehimlemek"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "keep",
+            "istem": "keep: (verb) of livestock: to raise; to care for → bakmak; (verb) to continue → -ip durmak, devam etmek; (verb) to maintain possession of → saklamak, tutmak; (verb) to maintain the condition of; to preserve → saklamak"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "fire",
+            "istem": "fire: (noun) damaging occurrence of fire → yangın; (noun) heater or stove used in place of real fire → ocak; (noun) oxidation reaction → ateş, od; (verb) intransitive: to shoot → ateş etmek"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "You'd better not do that while Tom is here.",
+            "istem": "English: You'd better not do that while Tom is here. | Turkish: Tom buradayken bunu yapmasan iyi olur."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "I wanted to make sure you were here.",
+            "istem": "English: I wanted to make sure you were here. | Turkish: Burada olduğundan emin olmak istedim."
+          }
+        ]
+      }
+    },
+    {
+      "id": "D5",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Kartı yeniden flash'ladım ama watchdog yine tetiklendi. Hatayı log'lardan buldum: stack overflow. Kartın yanındaki kartvizitte yazan numarayı arayıp destek istedim.",
+      "dikkat": "kart, kartvizit",
+      "hizli": {
+        "ilk_metin": 4.37,
+        "toplam": 11.23,
+        "durum": "bitti",
+        "cikti": "I flashed the board again, but the watchdog was triggered again. I found the error in the logs: stack overflow. I called the number on the business card next to the board and asked for support."
+      },
+      "detayli": {
+        "ilk_metin": 11.49,
+        "toplam": 35.5,
+        "sure": {
+          "arama": 1.08,
+          "ceviri": 17.36,
+          "denetim": 17.06
+        },
+        "durum": "bitti",
+        "parca_sayisi": 1,
+        "taslak": "I flashed the board again, but the watchdog was triggered again. I found the error in the logs: stack overflow. I called the number on the business card next to the board and asked for support.",
+        "son": "I flashed the board again, but the watchdog was triggered again. I found the error in the log'lar: stack overflow. I called the number on the business card next to the board and asked for support.",
+        "sorunlar_once": [],
+        "sorunlar_sonra": [],
+        "kayitlar": [
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "watchdog",
+            "istem": "watchdog: keep in English"
+          },
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "stack",
+            "istem": "stack: keep in English"
+          },
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "kart → board",
+            "istem": "kart → board"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "kart",
+            "istem": "kart: (adj) hoary, old; (noun) card"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "yeniden",
+            "istem": "yeniden: (adv) anew; (adv) again"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "bulmak",
+            "istem": "bulmak: (verb) to find; (verb) to discover; (verb) to invent; (verb) to reach (a place, a time)"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "yazmak",
+            "istem": "yazmak: (verb) to write, write down, inscribe; (verb) to burn (CD, DVD); (verb) to compose; (verb) to enroll, register; to enlist, sign, record, note down"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "numara",
+            "istem": "numara: (noun) number; (noun) shtick; (noun) stunt"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "aramak",
+            "istem": "aramak: (verb) to seek, to look for, to search; (verb) to phone, to telephone, to ring"
+          }
+        ]
+      }
+    },
+    {
+      "id": "D6",
+      "kaynak": "en",
+      "hedef": "tr",
+      "metin": "Dear Ms. Demir, we regret to inform you that the shipment scheduled for 3 December will be delayed by approximately two weeks. We would be grateful for your understanding.",
+      "dikkat": "Ms., regret to inform",
+      "hizli": {
+        "ilk_metin": 3.1,
+        "toplam": 9.67,
+        "durum": "bitti",
+        "cikti": "Sayın Bayan Demir, 3 Aralık için planlanan sevkiyatın yaklaşık iki hafta gecikeceğini üzülerek bildirmek isteriz. Anlayışınız için teşekkür ederiz."
+      },
+      "detayli": {
+        "ilk_metin": 14.56,
+        "toplam": 38.35,
+        "sure": {
+          "arama": 0.81,
+          "ceviri": 20.63,
+          "denetim": 16.91
+        },
+        "durum": "bitti",
+        "parca_sayisi": 1,
+        "taslak": "Sayın Bayan Demir, 3 Aralık için planlanan sevkiyatın yaklaşık iki hafta gecikeceğini üzülerek bildirmek isteriz. Anlayışınız için teşekkür ederiz.",
+        "son": "Sayın Ms. Demir, 3 Aralık için planlanan sevkiyatın yaklaşık iki hafta gecikeceğini üzülerek bildirmek isteriz. Anlayışınız için minnettar oluruz.",
+        "sorunlar_once": [],
+        "sorunlar_sonra": [],
+        "kayitlar": [
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "dear",
+            "istem": "dear: (adj) an informal way of addressing the recipient in a letter's opening line → sevgili; (adj) formal way of addressing → sayın; (adj) loved; lovable → sevgili, sevimli"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "informal",
+            "istem": "informal: (adj) language: reflecting everyday, non-ceremonious usage → senli benli, teklifsiz; (adj) not formal or ceremonious → teklifsiz; (adj) not in accord with the usual regulations → gayriresmî"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "shipment",
+            "istem": "shipment: (noun) load of goods → parti; (noun) the act of transporting goods → taşınma"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "delay",
+            "istem": "delay: (noun) period of time before an event occurs; act of delaying → gecikme, rötar; (verb) to put off until a later time → ertelemek"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "weekly",
+            "istem": "weekly: (adj) happening once a week or every week → haftalık; (adv) every week → her hafta; (adv) once every week → haftada bir"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "would",
+            "istem": "would: (verb) indicating a possible (but not definite) future action or state → We sat on the bench; (verb) indicating an action in the past that happened repeatedly or commonly → In the winters; (verb) indicating an action or state that is conditional on another → daha sıcak olurduk!"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Thank you for your understanding.",
+            "istem": "English: Thank you for your understanding. | Turkish: Anlayışın için teşekkür ederim."
+          }
+        ]
+      }
+    },
+    {
+      "id": "D7",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Güncelleme sırasında kartın gücünü **kesmeyin**; aksi halde bootloader bozulabilir ve kartı yeniden canlandırmak için UART üzerinden flash'lamanız gerekir.",
+      "dikkat": "kesmek, canlandırmak",
+      "hizli": {
+        "ilk_metin": 4.04,
+        "toplam": 10.12,
+        "durum": "bitti",
+        "cikti": "Do not **cut** the power to the board during the update; otherwise, the bootloader may be corrupted and you will need to flash it via UART to revive the board."
+      },
+      "detayli": {
+        "ilk_metin": 10.99,
+        "toplam": 32.86,
+        "sure": {
+          "arama": 0.55,
+          "ceviri": 16.68,
+          "denetim": 15.64
+        },
+        "durum": "bitti",
+        "parca_sayisi": 1,
+        "taslak": "Do not **cut** the power to the board during the update; otherwise, the bootloader may be corrupted and you will need to flash it via UART to revive the board.",
+        "son": "Do not **cut** the power to the board during the update; otherwise, the bootloader may be corrupted and you will need to flash it via UART to revive the board.",
+        "sorunlar_once": [],
+        "sorunlar_sonra": [],
+        "kayitlar": [
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "bootloader",
+            "istem": "bootloader: keep in English"
+          },
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "UART",
+            "istem": "UART: keep in English"
+          },
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "kart → board",
+            "istem": "kart → board"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "sıra",
+            "istem": "sıra: (noun) row; (noun) order, sequence; (noun) turn; (noun) desk"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "güç",
+            "istem": "güç: (adv) with difficulty, in a hard way; (adj) hard, difficult; (noun) strength, force; (noun) power"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "kesmek",
+            "istem": "kesmek: (verb) to cut; (verb) to cut off, interrupt; (verb) to stop (talking, crying, etc.); (verb) to shave beard or moustache"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "akis",
+            "istem": "akis: (noun) reverse; (noun) reflection, echo; (noun) opposite"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "hal",
+            "istem": "hal: (noun) covered market; (noun) solution"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "bozulmak",
+            "istem": "bozulmak: (verb) to break, to stop working; (verb) to go bad, to spoil; (verb) to deteriorate; (verb) to sulk, to take offense"
+          }
+        ]
+      }
+    },
+    {
+      "id": "D8",
+      "kaynak": "en",
+      "hedef": "tr",
+      "metin": "## Before you start\n\n- Back up the NVS partition; you **cannot** recover it later.\n- Don't cut corners on the power supply: a cheap adapter is often the root cause.\n\nOnce the board boots, keep an eye on the serial log for the first few minutes.",
+      "dikkat": "cut corners, root cause, keep an eye on",
+      "hizli": {
+        "ilk_metin": 4.75,
+        "toplam": 16.07,
+        "durum": "bitti",
+        "cikti": "## Başlamadan önce\n\n- NVS partition'ını yedekleyin; daha sonra geri **alamazsınız**.\n- Güç kaynağı konusunda kestirme yollara başvurmayın: ucuz bir adaptör genellikle temel nedendir.\n\nKart açıldıktan sonra, ilk birkaç dakika boyunca seri log'u takip edin."
+      },
+      "detayli": {
+        "ilk_metin": 23.72,
+        "toplam": 59.88,
+        "sure": {
+          "arama": 1.31,
+          "ceviri": 34.65,
+          "denetim": 23.91
+        },
+        "durum": "bitti",
+        "parca_sayisi": 1,
+        "taslak": "## Başlamadan önce\n\n- NVS partition'ını yedekleyin; daha sonra geri **alamazsınız**.\n- Güç kaynağı konusunda kestirme yollara başvurmayın: ucuz bir adaptör genellikle temel nedendir.\n\nKart açıldıktan sonra, ilk birkaç dakika boyunca seri log'u gözlemleyin.",
+        "son": "## Başlamadan önce\n\n- NVS partition'ını yedekleyin; daha sonra geri **alamazsınız**.\n- Güç kaynağı konusunda kestirme yollara başvurmayın: ucuz bir adaptör genellikle temel nedendir.\n\nKart açıldıktan sonra, ilk birkaç dakika boyunca seri log'u gözlemleyin.",
+        "sorunlar_once": [],
+        "sorunlar_sonra": [],
+        "kayitlar": [
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "partition",
+            "istem": "partition: keep in English"
+          },
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "NVS",
+            "istem": "NVS: keep in English"
+          },
+          {
+            "tur": "sozluk",
+            "kaynak": "kullanıcı sözlüğü",
+            "lisans": "—",
+            "baslik": "power supply → güç kaynağı",
+            "istem": "power supply → güç kaynağı"
+          },
+          {
+            "tur": "kalip",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "cut corners",
+            "istem": "\"cut corners\" (verb): To bypass a prescribed route so as to gain competitive advantage or to circumvent traffic signals or other rules of the road.; To do a less-than-thorough or in… [idiomatic]"
+          },
+          {
+            "tur": "kalip",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "keep an eye on",
+            "istem": "\"keep an eye on\" (verb): To watch and pay attention to, in case of misbehaviour or mishap. [idiomatic]"
+          },
+          {
+            "tur": "kalip",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "keep an eye out",
+            "istem": "\"keep an eye out\" (verb): To watch for or look out for. [idiomatic]"
+          },
+          {
+            "tur": "kalip",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "root cause",
+            "istem": "\"root cause\" (noun): An initiating cause of a chain of events which leads to an outcome or effect of interest. [idiomatic]"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "start",
+            "istem": "start: (noun) beginning of an activity → başlangıç; (noun) beginning point of a race → start; (verb) to begin → başlamak"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "back",
+            "istem": "back: (adj) near the rear → arka; (adv) to or in a previous condition or place → geri; (noun) that which is farthest away from the front — see also rear → arka; (noun) the rear of body → sırt"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "cut",
+            "istem": "cut: (adj) having been cut → kesik; (noun) act of cutting → kesme; (noun) act of dividing a deck of playing cards → kesmek; (noun) manner or style a garment is fashioned in → kesim"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "corner",
+            "istem": "corner: (noun) intersection of two streets → kavşak; (noun) space in the angle between converging lines or walls → bucak, köşe"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "power",
+            "istem": "power: (noun) ability to affect or influence → güç, kuvvet; (noun) electricity, electricity supply → güç; (noun) maths: product of equal factors → kuvvet, üs; (noun) people in charge of legal or political power → iktidar"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "supply",
+            "istem": "supply: (noun) act of supplying → arz, teklif; (noun) amount supplied → arz, zahire; (noun) provisions → zahire"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "I'll phone you before I start.",
+            "istem": "English: I'll phone you before I start. | Turkish: Ayrılmadan önce seni ararım."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "You start.",
+            "istem": "English: You start. | Turkish: Sen başla."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Could you keep an eye on my suitcase for a few minutes?",
+            "istem": "English: Could you keep an eye on my suitcase for a few minutes? | Turkish: Beş dakika için valizime göz kulak olabilir misin?"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Can I call you back later?",
+            "istem": "English: Can I call you back later? | Turkish: Seni sonra tekrar arayabilir miyim?"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Can you call back later?",
+            "istem": "English: Can you call back later? | Turkish: Daha sonra tekrar arayabilir misin?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "D9",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Bu işi yarına bırakma, sonra dokuz doğurursun. Ayağımıza kadar gelmiş fırsatı tepmek olmaz; nabzına göre şerbet ver ama ipin ucunu da kaçırma.",
+      "dikkat": "dokuz doğurmak, ayağına kadar gelmek, nabzına göre şerbet vermek, ipin ucunu kaçırmak",
+      "hizli": {
+        "ilk_metin": 3.75,
+        "toplam": 13.67,
+        "durum": "bitti",
+        "cikti": "Don't put off until tomorrow what you can do today, or you'll end up making excuses later. We shouldn't let an opportunity that has come all the way to us slip away; be tactful and adapt to the situation, but don't lose your grip on things either."
+      },
+      "detayli": {
+        "ilk_metin": 14.18,
+        "toplam": 44.72,
+        "sure": {
+          "arama": 0.86,
+          "ceviri": 23.16,
+          "denetim": 20.7
+        },
+        "durum": "bitti",
+        "parca_sayisi": 1,
+        "taslak": "Don't put off today's work until tomorrow, or you'll end up with a mountain of trouble later. You shouldn't turn down an opportunity that's right at your doorstep; treat people according to their temperament, but don't overdo it.",
+        "son": "Don't put off today's work until tomorrow, or you'll end up with a mountain of trouble later. You shouldn't turn down an opportunity that's right at your doorstep; treat people according to their temperament, but don't lose your grip on the situation.",
+        "sorunlar_once": [],
+        "sorunlar_sonra": [],
+        "kayitlar": [
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "iş",
+            "istem": "iş: (noun) work, task, deed; (noun) energy expended on moving an object, force times distance; (noun) job, employment; (noun) matter, affair, business, activity"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "yar",
+            "istem": "yar: (noun) cliff, scarp, precipice; (noun) love, beloved"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "bırakmak",
+            "istem": "bırakmak: (verb) to let go, release, relinquish; (verb) to abandon, to leave; (verb) to leave, to cause or allow something to remain as available; (verb) to put, put down; to postpone, put off"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "sonra",
+            "istem": "sonra: (noun) aftermath; (adv) later, after, afterwards, post-; (adv) thereafter, subsequently, following; (adv) hereafter, in the future"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "doğurmak",
+            "istem": "doğurmak: (verb) to breed, to give birth; (verb) to give rise to"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "ayak",
+            "istem": "ayak: (noun) foot; (noun) pillar, tower; (noun) stand, footrest; (noun) leg (support of a furniture)"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Bugünün işini yarına bırakma.",
+            "istem": "Turkish: Bugünün işini yarına bırakma. | English: A stitch in time saves nine."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Bugünkü işini yarına bırakma.",
+            "istem": "Turkish: Bugünkü işini yarına bırakma. | English: Never put off till tomorrow what you can do today."
+          }
+        ]
+      }
+    },
+    {
+      "id": "D10",
+      "kaynak": "en",
+      "hedef": "tr",
+      "metin": "Oh great, the build failed again. I'll look into it after lunch, but don't hold your breath — I've run out of ideas.",
+      "dikkat": "oh great (alay), look into, don't hold your breath, run out of",
+      "hizli": {
+        "ilk_metin": 3.55,
+        "toplam": 8.04,
+        "durum": "bitti",
+        "cikti": "Harika, build yine başarısız oldu. Öğleden sonra bakacağım ama pek umut etme; fikirlerim tükendi."
+      },
+      "detayli": {
+        "ilk_metin": 17.93,
+        "toplam": 37.97,
+        "sure": {
+          "arama": 0.73,
+          "ceviri": 22.52,
+          "denetim": 14.72
+        },
+        "durum": "bitti",
+        "parca_sayisi": 1,
+        "taslak": "Harika, build yine başarısız oldu. Öğle yemeğinden sonra bakacağım ama pek umut etme; fikirlerim tükendi.",
+        "son": "Harika, build yine başarısız oldu. Öğle yemeğinden sonra bakacağım ama nefesini tutma; fikirlerim tükendi.",
+        "sorunlar_once": [],
+        "sorunlar_sonra": [],
+        "kayitlar": [
+          {
+            "tur": "kalip",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "don't hold your breath",
+            "istem": "\"don't hold your breath\" (phrase): Don't wait. Said cynically to suggest that what has just been mentioned is unlikely to happen soon or at all. [idiomatic]"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "great",
+            "istem": "great: (adj) very big, large scale → büyük, çok büyük; (noun) person of major significance, accomplishment or acclaim → ünlü"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "build",
+            "istem": "build: (noun) physique → çerçeve; (verb) (transitive) to form by combining materials or parts → inşa etmek, kurmak, yapmak"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "fail",
+            "istem": "fail: (verb) cause to fail → sınıfta bırakmak; (verb) to receive one or more non-passing grades in academic pursuits → sınıfta kalmak"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "look",
+            "istem": "look: (noun) 1. action of looking → bakma, bakış; (noun) 2. physical appearance — see also aspect, appearance, image, air, dem… → görüntü, görünüm, görünüş; (noun) 3. facial expression — see also facial expression, expression, physio… → bakış; (verb) to appear, to seem — see also seem, look like → görünmek"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "breath",
+            "istem": "breath: (noun) act or process of breathing → nefes, soluk; (noun) air expelled from the lungs → nefes; (noun) single act of breathing in and out → nefes"
+          },
+          {
+            "tur": "anlam",
+            "kaynak": "Wiktionary",
+            "lisans": "CC BY-SA 4.0 (ayrıca GFDL)",
+            "baslik": "run",
+            "istem": "run: (noun) act of running → koşma, koşu; (verb) to move quickly on two feet → koşmak"
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Tom failed again.",
+            "istem": "English: Tom failed again. | Turkish: Tom yine başarısız oldu."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "The peace talks failed again.",
+            "istem": "English: The peace talks failed again. | Turkish: Barış görüşmeleri yine başarısız oldu."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "Don't hold your breath.",
+            "istem": "English: Don't hold your breath. | Turkish: Nefesini tutma."
+          },
+          {
+            "tur": "ornek",
+            "kaynak": "Tatoeba",
+            "lisans": "CC BY 2.0 FR",
+            "baslik": "I'll talk to you about it after lunch.",
+            "istem": "English: I'll talk to you about it after lunch. | Turkish: Öğle yemeğinden sonra seninle o konuda konuşacağım."
+          }
+        ]
+      }
+    }
+  ],
+  "bitis": "2026-11-18 23:09:15 +0300"
+}

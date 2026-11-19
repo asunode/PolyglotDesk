@@ -1,0 +1,54 @@
+{
+  "testler": [
+    {
+      "id": "H1",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Yeni dükkânın hayırlı olsun abi, bol kazançlı olsun.\nOğlun askerden dönmüş, gözün aydın!\nDün düşüp bileğini burkmuşsun, geçmiş olsun."
+    },
+    {
+      "id": "H2",
+      "kaynak": "en",
+      "hedef": "tr",
+      "metin": "The bootloader will not erase the NVS partition unless you pass the --erase-all flag.\nWithout an external pull-up resistor, the I2C bus cannot reliably return to the idle state.\n**Never** flash the device while the battery is below 20%."
+    },
+    {
+      "id": "H3",
+      "kaynak": "tr",
+      "hedef": "en",
+      "metin": "Yaz gelince bu notları deftere yaz.\nKır saçlı adam kırda yürürken bir dalı kırdı.\nÇay kenarında piknik yaparken semaverde çay demledik."
+    }
+  ],
+  "sonuclar": {
+    "gemma4:12b-it-qat": {
+      "yukleme": 1.2,
+      "yerlesim": "%0 GPU, 8.8 GB",
+      "testler": {
+        "H1": {
+          "ilk": 5.41,
+          "toplam": 12.37,
+          "ham": "Congratulations on the new shop, brother, may it be very profitable.\nYour son has returned from his military service, good for you!\nYou fell and sprained your wrist yesterday, get well soon.",
+          "istem_token": 139,
+          "uretilen_token": 43,
+          "cikti": "Congratulations on the new shop, brother, may it be very profitable.\nYour son has returned from his military service, good for you!\nYou fell and sprained your wrist yesterday, get well soon."
+        },
+        "H2": {
+          "ilk": 5.16,
+          "toplam": 17.85,
+          "ham": "--erase-all bayrağını geçmediğiniz sürece önyükleyici NVS bölümünü silmeyecektir.\nHarici bir pull-up direnci olmadan I2C veri yolu güvenilir bir şekilde boşta (idle) durumuna dönemez.\nPil %20'nin altındayken cihazı **asla** flaşlamayın.",
+          "istem_token": 150,
+          "uretilen_token": 77,
+          "cikti": "--erase-all bayrağını geçmediğiniz sürece önyükleyici NVS bölümünü silmeyecektir.\nHarici bir pull-up direnci olmadan I2C veri yolu güvenilir bir şekilde boşta (idle) durumuna dönemez.\nPil %20'nin altındayken cihazı **asla** flaşlamayın."
+        },
+        "H3": {
+          "ilk": 5.02,
+          "toplam": 11.87,
+          "ham": "Write these notes in the notebook when summer comes.\nThe gray-haired man broke a branch while walking in the countryside.\nWe brewed tea in the samovar while having a picnic by the creek.",
+          "istem_token": 139,
+          "uretilen_token": 42,
+          "cikti": "Write these notes in the notebook when summer comes.\nThe gray-haired man broke a branch while walking in the countryside.\nWe brewed tea in the samovar while having a picnic by the creek."
+        }
+      }
+    }
+  }
+}

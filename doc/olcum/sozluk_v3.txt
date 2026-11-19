@@ -1,0 +1,103 @@
+# çevirmen — terim sözlüğü
+#
+# Bu dosyayı herhangi bir metin düzenleyiciyle değiştirebilirsiniz. Kaydettiğiniz
+# anda sonraki çeviride geçerli olur; uygulamayı yeniden başlatmak gerekmez.
+#
+# Nasıl yazılır:
+#   - "#" ile başlayan satırlar açıklamadır.
+#   - Köşeli parantezli satır bir bölüm başlatır:
+#       [İngilizce kalsın]       her satıra bir terim; iki yönde de İngilizce bırakılır
+#       [İngilizce → Türkçe]     "kaynak = hedef"; İngilizceden çeviride hep böyle çevrilir
+#       [Türkçe → İngilizce]     "kaynak = hedef"; Türkçeden çeviride hep böyle çevrilir
+#       [Türkçe → İngilizce, teknik bağlamda]
+#                                gündelik anlamı da olan kelimeler (kart, kayıt): yalnız
+#                                metinde başka bir sözlük terimi de geçiyorsa uygulanır
+#   - Büyük/küçük harf fark etmez. Yalnız tamamı büyük harfli kısaltmalar (OTA, NVS)
+#     birebir aranır.
+#   - Türkçe metinde ekli biçimler de bulunur: "kart" yazmak "karta", "kartı", "kartlarındaki"
+#     için de yeter; "kartal", "kartvizit" gibi başka kelimeler eşleşmez.
+#   - Ses değişimi olan yazımlar "|" ile eklenir: "kayıt | kayd = log" ("kaydı" da bulunur).
+#     Modele ilk yazım gider.
+#   - Modele yalnız çevrilen metinde geçen terimler gönderilir.
+
+[İngilizce kalsın]
+# Gömülü sistem
+watchdog
+firmware
+bootloader
+brownout
+register
+pipeline
+kernel panic
+panic handler
+backtrace
+core dump
+strapping pin
+pull-up
+pull-down
+deep sleep
+light sleep
+partition
+OTA
+NVS
+eFuse
+GPIO
+UART
+SPI
+I2C
+I2S
+ADC
+DAC
+PWM
+DMA
+JTAG
+SoC
+MCU
+RTOS
+FreeRTOS
+task
+scheduler
+semaphore
+mutex
+interrupt
+ISR
+heap
+stack
+buffer
+callback
+bootloop
+menuconfig
+sdkconfig
+toolchain
+linker
+# Ağ
+Wi-Fi
+BLE
+MQTT
+HTTP
+HTTPS
+TLS
+DNS
+DHCP
+TCP
+UDP
+socket
+payload
+endpoint
+gateway
+router
+baud rate
+
+[İngilizce → Türkçe]
+power supply = güç kaynağı
+timeout = zaman aşımı
+embedded system = gömülü sistem
+
+[Türkçe → İngilizce]
+SD kart = SD card
+güç kaynağı = power supply
+
+[Türkçe → İngilizce, teknik bağlamda]
+kart = board
+kayıtlar = logs
+kayıt | kayd = log
