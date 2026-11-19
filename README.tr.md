@@ -23,7 +23,7 @@ Arayüz Türkçedir.
 
 - Tamamen yerel: Ollama + `gemma4:12b-it-qat`; hesap yok, bulut yok.
 - Türkçe ↔ İngilizce; yön değiştirme düğmesi iki paneli de takas eder.
-- Hızlı çeviri yapıştırınca hemen (yazarken, yazmayı bıraktıktan 1 sn sonra) başlar, kelime kelime akar, durdurulabilir; uzun metinleri parçalara böler, böylece yalnız düzeltilen parça yeniden çevrilir.
+- Hızlı çeviri metni yapıştırınca hemen, elle yazarken de yazmayı bıraktıktan 1 sn sonra başlar; kelime kelime akar, durdurulabilir ve uzun metinleri parçalara böler, böylece yalnız düzeltilen parça yeniden çevrilir.
 - Detaylı Çevir (düğme ya da **Ctrl+Enter**): yerel PostgreSQL bilgi paketi ve denetim geçişi; denetim yapılandırılmış biçimde cevap verir, kod yalnız güvenli düzeltmeleri uygular.
 - "Kullanılan bilgiler" bölümü modele giden her sözlük kaydını kaynağı ve lisansıyla gösterir; bir seçiciyle hızlı ve detaylı sonuç karşılaştırılır.
 - Düzenlenebilir terim sözlüğü (`~/.config/cevirmen/sozluk.txt`): İngilizce kalacak teknik terimler, sabit karşılıklar ve yalnız donanım/elektronik bağlamında farklı çevrilen kelimeler (ör. *kart* → *board*); bu bağlamı açan terimlerin listesi de düzenlenebilir. Değişiklik yeniden başlatmadan geçerli olur.
@@ -60,7 +60,7 @@ Intel Core i5-11600K, **yalnız işlemci** (GPU yok), `gemma4:12b-it-qat` ile ö
 
 ## Bilinen sınırlar
 
-- Hızlı çeviri testlerimizde gündelik metinde güvenilir çıktı, ama hata yapabilir. Önemli ya da teknik metinlerde Detaylı Çevir'i kullanın ve sonucu kontrol edin.
+- Hızlı çeviri testlerimizde gündelik metinlerde güvenilir sonuç verdi, ama hata yapabilir. Önemli ya da teknik metinlerde Detaylı Çevir'i kullanın ve sonucu kontrol edin.
 - Türkçe deyim kapsamı sınırlı: birçok deyim veride yok, bazı çekimli fiil biçimleri tanınmıyor.
 - İşlemcide yavaş; modelin tamamını alabilen bir ekran kartıyla çok daha hızlı olur.
 - Şimdilik yalnız Türkçe ↔ İngilizce. Yalnız Ubuntu'da denendi.
@@ -70,12 +70,14 @@ Intel Core i5-11600K, **yalnız işlemci** (GPU yok), `gemma4:12b-it-qat` ile ö
 
 Her adım ölçüldü; ham sonuçlar [`doc/olcum/`](doc/olcum/) klasöründe.
 
+1–4. adımlar otomatik ölçüm ve puanları gösterir; 5–8. adımlardaki sonuçlar, değerlendirmeyi yapan Claude'un (sohbet) ham çıktılara bakarak verdiği nitel değerlendirmelerdir; ham çıktılar doc/olcum/ klasöründe değiştirilmeden yayımlandı.
+
 | Adım | Yapılan | Sonuç | Kayıtlar |
 |---|---|---|---|
 | 1 | Model seçimi | Kurulu 5 model ölçüldü; `gemma4:12b-it-qat` seçildi. Bu makinede eski GPU yerine yalnız işlemci daha hızlı çıktı. | [model-karsilastirma.md](doc/olcum/model-karsilastirma.md) |
 | 2 | TranslateGemma 12B karşılaştırması | Elendi: bir teknik cümlenin anlamını 4 denemenin 4'ünde tersine çevirdi. | [model-karsilastirma-v2.md](doc/olcum/model-karsilastirma-v2.md) |
-| 3 | Hızlı çeviri iyileştirmeleri: kurallar ve örnekler, terim sözlüğü, sabit örnekleme, parça parça çeviri | Test setinde 11 → 16 geçti | [olcum-v3.md](doc/olcum/olcum-v3.md) |
-| 4 | Detaylı Çevir: PostgreSQL bilgi paketi (Wiktionary + Tatoeba) ve denetim geçişi | | [olcum-v4.md](doc/olcum/olcum-v4.md) |
+| 3 | Hızlı çeviri iyileştirmeleri: kurallar ve örnekler, terim sözlüğü, belirlenimci örnekleme (temperature 0, sabit seed), parça parça çeviri | Test setinde 11 → 16 geçti | [olcum-v3.md](doc/olcum/olcum-v3.md) |
+| 4 | Detaylı Çevir: PostgreSQL bilgi paketi (Wiktionary + Tatoeba) ve denetim geçişi | Kontrol seti v2'de hızlı 4 → Detaylı 7 geçti | [olcum-v4.md](doc/olcum/olcum-v4.md) |
 | 5–7 | Detaylı Çevir'in üç turu | İlk tur, 10 metnin 4'ünde hızlı çeviriden kötüydü; ikinci tur 18 metinde 8 daha iyi / 9 aynı / 1 daha kötü; üçüncü turda 26 metinde ciddi hata yok. Her tur daha önce görülmemiş yeni bir doğrulama setiyle ölçüldü. | [v1](doc/olcum/detayli-test-v1-sonuc.md), [v2](doc/olcum/detayli-test-v2-sonuc.md), [v3](doc/olcum/detayli-test-v3-sonuc.md) |
 | 8 | Gündelik konu testi (24 metin, 12 kişi/konu × 2 yön) | Olumsuzluk ya da sayı/fiyat/yön hatası yok; 1 model hatası ("next week" → "hafta sonu"); 1 uygulama hatası (K6, Adım 9'da düzeltildi); 24 metnin 24'ü iki koşuda aynı. | [hizli-konu-testi-v1-sonuc.md](doc/olcum/hizli-konu-testi-v1-sonuc.md), [K6 düzeltmesi](doc/olcum/k6-kontrol-sonuc.md) |
 
@@ -91,8 +93,8 @@ python3 -m unittest discover -s tests
 
 Detaylı Çevir şu verileri kullanır:
 
-- **Wiktionary** (İngilizce Vikisözlük, [kaikki.org](https://kaikki.org/dictionary/rawdata.html) wiktextract çıkarımı üzerinden) — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (ayrıca GFDL).
-- **Tatoeba** (Türkçe–İngilizce cümle çiftleri, [tatoeba.org](https://tatoeba.org)) — [CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/).
+- **Wiktionary** — Wiktionary katkıcıları (İngilizce Vikisözlük, Tatu Ylonen'in [wiktextract](https://github.com/tatuylonen/wiktextract) projesiyle üretilen [kaikki.org](https://kaikki.org/dictionary/rawdata.html) çıkarımı üzerinden) — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (ayrıca GFDL).
+- **Tatoeba** — Tatoeba katkıcıları (Türkçe–İngilizce cümle çiftleri, [tatoeba.org](https://tatoeba.org)) — [CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/).
 
 Veri bu depoda **yer almaz**. Kullanıcının makinesinde yükleme betiğiyle (`veritabani/yukle.py`) indirilip yüklenir; her kayıt kaynağına ve lisansına bağlı kalır ve uygulama bunları gösterir.
 

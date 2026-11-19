@@ -48,7 +48,17 @@ GRANT CONNECT ON DATABASE cevirmen TO cevirmen_okur;
 
 Tablolardaki `SELECT` yetkisini yükleme betiği her yüklemede verir (5. adım). `pg_trgm` eklentisini yükleyici veritabanı sahibi olarak oluşturur (güvenilir bir eklentidir).
 
-**İsteğe bağlı yardımcı:** son blok yerine `veritabani/okur_rol.sh` yalnız okuma rolünü rastgele bir şifreyle oluşturur ve şifreyi `~/.pgpass` dosyanıza yazar. Kendi kullanıcınızla, yönetici bağlantısını standart `PG*` değişkenleriyle vererek çalıştırın; örneğin `PGHOST=127.0.0.1 PGUSER=postgres veritabani/okur_rol.sh`.
+**İsteğe bağlı yardımcı:** son blok yerine `veritabani/okur_rol.sh` yalnız okuma rolünü rastgele bir şifreyle oluşturur ve şifreyi `~/.pgpass` dosyanıza yazar. Veritabanı oluşturulduktan sonra kendi kullanıcınızla çalıştırın. Betik bir **yönetici bağlantısı** (süper kullanıcı rolü) gerektirir ve bunu standart `PG*` değişkenlerinden ve `~/.pgpass` dosyasından alır. Varsayılan Ubuntu kurulumunda `postgres` rolünün şifresi yoktur; bu yüzden `PGHOST=127.0.0.1 PGUSER=postgres` gibi bir TCP bağlantısı şifre sorar ve başarısız olur. İki yol var:
+
+- **(a)** Kendi kullanıcınız için bir süper kullanıcı rolü oluşturun ve betiği `PG*` değişkeni vermeden, yerel soket üzerinden çalıştırın (Ubuntu'nun varsayılan `peer` doğrulaması, oturum kullanıcınızın aynı adlı rolü kullanmasına izin verir):
+
+  ```bash
+  sudo -u postgres createuser --superuser "$USER"
+  veritabani/okur_rol.sh
+  ```
+
+  Süper kullanıcı yetkisini hemen ardından `sudo -u postgres psql -c "ALTER ROLE \"$USER\" NOSUPERUSER"` ile kaldırabilirsiniz.
+- **(b)** En basiti: yukarıdaki SQL bloğunu `sudo -u postgres psql` oturumunda çalıştırın, yardımcıyı kullanmayın.
 
 ## 3. Şifreler
 
@@ -93,13 +103,15 @@ Dört dosyayı tek bir klasöre koyun, örneğin `~/.cache/cevirmen/indirilen`:
 
 ```bash
 mkdir -p ~/.cache/cevirmen/indirilen && cd ~/.cache/cevirmen/indirilen
-wget https://kaikki.org/dictionary/raw-wiktextract-data.jsonl.gz
-wget https://downloads.tatoeba.org/exports/per_language/tur/tur_sentences.tsv.bz2
-wget https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv.bz2
-wget https://downloads.tatoeba.org/exports/per_language/tur/tur-eng_links.tsv.bz2
+wget -c https://kaikki.org/dictionary/raw-wiktextract-data.jsonl.gz
+wget -c https://downloads.tatoeba.org/exports/per_language/tur/tur_sentences.tsv.bz2
+wget -c https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv.bz2
+wget -c https://downloads.tatoeba.org/exports/per_language/tur/tur-eng_links.tsv.bz2
 cd -
 python3 -I veritabani/yukle.py --kaynak ~/.cache/cevirmen/indirilen
 ```
+
+`wget -c` sayesinde yarıda kesilen bir indirme, aynı komut yeniden çalıştırıldığında kaldığı yerden sürer.
 
 İndirilen dosyalar güvenilmeyen veri sayıldığı için `-I` önerilir. Betik Wiktionary dosyasını akış hâlinde okur, her şeyi geçici `bilgi_yeni` şemasına yükler, dizinleri kurar, uygulama rolüne okuma yetkisi verir ve tek işlemde `bilgi` ile yer değiştirir. Yükleme yarıda kalırsa önceki veri olduğu gibi kalır. Birkaç bozuk çeviri satırı genel kurallarla ayıklanır (elle seçilmiş kayıt yoktur). Bitince satır sayılarını ve veritabanı boyutunu yazar.
 

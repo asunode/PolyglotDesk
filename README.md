@@ -23,7 +23,7 @@ The user interface is in Turkish.
 
 - Fully local: Ollama + `gemma4:12b-it-qat`; no account, no cloud.
 - Turkish ↔ English with a direction switch that also swaps the two panels.
-- Quick translation starts immediately on paste (1 s after you stop typing), streams word by word, can be stopped, and splits long texts into parts so that only edited parts are translated again.
+- Quick translation starts immediately when you paste text, or 1 s after you stop typing; it streams word by word, can be stopped, and splits long texts into parts so that only edited parts are translated again.
 - Detailed Translation (button or **Ctrl+Enter**) with a local PostgreSQL knowledge pack and a review pass; the review answers in structured form and the code applies only safe corrections.
 - "Kullanılan bilgiler" panel shows every dictionary record sent to the model with its source and licence; a switch compares the quick and the detailed result.
 - Editable term glossary (`~/.config/cevirmen/sozluk.txt`): technical terms kept in English, fixed translations, and words translated differently only in hardware/electronics context (e.g. *kart* → *board*), with an editable list of the terms that trigger that context. Changes apply without restarting.
@@ -70,12 +70,14 @@ Measured on an Intel Core i5-11600K, **CPU only** (no GPU), `gemma4:12b-it-qat`:
 
 Every step was measured; the raw results (in Turkish) are in [`doc/olcum/`](doc/olcum/).
 
+Steps 1–4 report automatic measurements and scores; the results for steps 5–8 are qualitative assessments made by the reviewer (Claude in chat) from the raw outputs, which are published unchanged in doc/olcum/.
+
 | Step | What was done | Result | Records |
 |---|---|---|---|
 | 1 | Model selection | 5 installed models measured; `gemma4:12b-it-qat` chosen. On this machine the CPU alone was faster than the old GPU. | [model-karsilastirma.md](doc/olcum/model-karsilastirma.md) |
 | 2 | TranslateGemma 12B comparison | Rejected: it reversed the meaning of a technical sentence in 4 out of 4 attempts. | [model-karsilastirma-v2.md](doc/olcum/model-karsilastirma-v2.md) |
-| 3 | Quick translation improvements: rules and examples, term glossary, fixed sampling, part-by-part translation | Test set: 11 → 16 passed | [olcum-v3.md](doc/olcum/olcum-v3.md) |
-| 4 | Detailed Translation: PostgreSQL knowledge pack (Wiktionary + Tatoeba) and review pass | | [olcum-v4.md](doc/olcum/olcum-v4.md) |
+| 3 | Quick translation improvements: rules and examples, term glossary, deterministic sampling (temperature 0, fixed seed), part-by-part translation | Test set: 11 → 16 passed | [olcum-v3.md](doc/olcum/olcum-v3.md) |
+| 4 | Detailed Translation: PostgreSQL knowledge pack (Wiktionary + Tatoeba) and review pass | Control set v2: quick 4 → Detailed 7 passed | [olcum-v4.md](doc/olcum/olcum-v4.md) |
 | 5–7 | Three rounds of Detailed Translation | Round 1: worse than quick translation on 4 of 10 texts. Round 2: on 18 texts 8 better / 9 same / 1 worse. Round 3: no serious errors on 26 texts. Each round was measured on a new, previously unseen validation set. | [v1](doc/olcum/detayli-test-v1-sonuc.md), [v2](doc/olcum/detayli-test-v2-sonuc.md), [v3](doc/olcum/detayli-test-v3-sonuc.md) |
 | 8 | Everyday topics test (24 texts: 12 speakers/topics × 2 directions) | No negation, number, price or direction errors; 1 model error ("next week" → "hafta sonu", i.e. "weekend"); 1 application error (K6, fixed in step 9); 24 of 24 texts identical in two runs. | [hizli-konu-testi-v1-sonuc.md](doc/olcum/hizli-konu-testi-v1-sonuc.md), [K6 fix](doc/olcum/k6-kontrol-sonuc.md) |
 
@@ -91,8 +93,8 @@ python3 -m unittest discover -s tests
 
 Detailed Translation uses data from:
 
-- **Wiktionary** (English Wiktionary, via the [kaikki.org](https://kaikki.org/dictionary/rawdata.html) wiktextract extraction) — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (also GFDL).
-- **Tatoeba** (Turkish–English sentence pairs, [tatoeba.org](https://tatoeba.org)) — [CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/).
+- **Wiktionary** — Wiktionary contributors (English Wiktionary, via the [kaikki.org](https://kaikki.org/dictionary/rawdata.html) extraction, produced with the [wiktextract](https://github.com/tatuylonen/wiktextract) project by Tatu Ylonen) — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (also GFDL).
+- **Tatoeba** — Tatoeba contributors (Turkish–English sentence pairs, [tatoeba.org](https://tatoeba.org)) — [CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/).
 
 The data is **not** included in this repository. It is downloaded and loaded on the user's machine with the loader script (`veritabani/yukle.py`); every record keeps a link to its source and licence, and the application shows them.
 

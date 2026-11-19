@@ -48,7 +48,17 @@ GRANT CONNECT ON DATABASE cevirmen TO cevirmen_okur;
 
 `SELECT` rights on the tables are granted by the loader script every time it loads the data (step 5). The `pg_trgm` extension is created by the loader as the database owner (it is a trusted extension).
 
-**Optional helper:** instead of the last block, `veritabani/okur_rol.sh` creates the read-only role with a random password and writes it to your `~/.pgpass`. Run it as your own user with an administrator connection given through the standard `PG*` variables, e.g. `PGHOST=127.0.0.1 PGUSER=postgres veritabani/okur_rol.sh`.
+**Optional helper:** instead of the last block, `veritabani/okur_rol.sh` creates the read-only role with a random password and writes it to your `~/.pgpass`. Run it as your own user, after the database has been created. The script needs an **administrator connection** (a superuser role) and takes it from the standard `PG*` variables and `~/.pgpass`. On a default Ubuntu installation the `postgres` role has no password, so a TCP connection such as `PGHOST=127.0.0.1 PGUSER=postgres` asks for one and fails. Two ways:
+
+- **(a)** Create a superuser role for your own login and run the script over the local socket, without any `PG*` variables (Ubuntu's default `peer` authentication lets your login use the role of the same name):
+
+  ```bash
+  sudo -u postgres createuser --superuser "$USER"
+  veritabani/okur_rol.sh
+  ```
+
+  You can remove the superuser right afterwards with `sudo -u postgres psql -c "ALTER ROLE \"$USER\" NOSUPERUSER"`.
+- **(b)** Simplest: use the SQL block above in the `sudo -u postgres psql` session and skip the helper.
 
 ## 3. Passwords
 
@@ -78,7 +88,9 @@ Defaults: host `127.0.0.1`, port `5432`, database `cevirmen`, application role `
 }
 ```
 
-Environment variables take precedence over the settings file: `POLYGLOTDESK_PG_HOST`, `POLYGLOTDESK_PG_PORT`, `POLYGLOTDESK_PG_DB`, `POLYGLOTDESK_PG_USER`. The loader also reads `POLYGLOTDESK_PG_OWNER` (owner role) and accepts the same values as command-line options (`--host`, `--port`, `--vt`, `--sahip`, `--okur`).
+`pg_veritabani` is the database name and `pg_kullanici` the user name (the application role).
+
+Environment variables take precedence over the settings file: `POLYGLOTDESK_PG_HOST`, `POLYGLOTDESK_PG_PORT`, `POLYGLOTDESK_PG_DB`, `POLYGLOTDESK_PG_USER`. The loader also reads `POLYGLOTDESK_PG_OWNER` (owner role) and accepts the same values as command-line options (`--host`, `--port`, `--vt` (database name), `--sahip` (owner role), `--okur` (read-only role)).
 
 ## 5. Download the data and load it
 
@@ -93,13 +105,15 @@ Put the four files in one directory, for example `~/.cache/cevirmen/indirilen`:
 
 ```bash
 mkdir -p ~/.cache/cevirmen/indirilen && cd ~/.cache/cevirmen/indirilen
-wget https://kaikki.org/dictionary/raw-wiktextract-data.jsonl.gz
-wget https://downloads.tatoeba.org/exports/per_language/tur/tur_sentences.tsv.bz2
-wget https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv.bz2
-wget https://downloads.tatoeba.org/exports/per_language/tur/tur-eng_links.tsv.bz2
+wget -c https://kaikki.org/dictionary/raw-wiktextract-data.jsonl.gz
+wget -c https://downloads.tatoeba.org/exports/per_language/tur/tur_sentences.tsv.bz2
+wget -c https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv.bz2
+wget -c https://downloads.tatoeba.org/exports/per_language/tur/tur-eng_links.tsv.bz2
 cd -
 python3 -I veritabani/yukle.py --kaynak ~/.cache/cevirmen/indirilen
 ```
+
+With `wget -c`, an interrupted download continues from where it stopped when you run the same command again.
 
 `-I` is recommended because downloaded files are untrusted data. The script streams the Wiktionary file, loads everything into a temporary schema `bilgi_yeni`, builds the indexes, grants read access to the application role and then swaps it with `bilgi` in one transaction. If loading is interrupted, the previous data stays untouched. A few malformed translation lines are dropped by general rules (no record is selected by hand). When it finishes, it prints the row counts and the database size.
 
